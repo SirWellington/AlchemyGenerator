@@ -14,7 +14,7 @@ public extension AlchemyGenerator
     
     public class Integers
     {
-        public static func integer(from: Int, to: Int) -> Int
+        public static func any(from: Int, to: Int) -> Int
         {
             //Ensures `from` is less than `to`
             let `from` = from < to ? from : to
@@ -31,17 +31,17 @@ public extension AlchemyGenerator
         
         public static func positiveInteger() -> Int
         {
-            return integer(from: 1, to: 100_000)
+            return any(from: 1, to: 100_000)
         }
         
         public static func negativeInteger() -> Int
         {
-            return integer(from: -100_000, to: -1)
+            return any(from: -100_000, to: -1)
         }
         
         public static func anyInteger() -> Int
         {
-            return integer(from: -1_000, to: 1_000)
+            return any(from: -1_000, to: 1_000)
         }
     }
     
