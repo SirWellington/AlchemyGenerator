@@ -12,33 +12,38 @@ import Foundation
 public extension AlchemyGenerator
 {
     
-    static func integer(from: Int, to: Int) -> Int
+    public class Integers
     {
-        //Ensures `from` is less than `to`
-        let `from` = from < to ? from : to
-        let `to` = to > from ? to : from
+        public static func integer(from: Int, to: Int) -> Int
+        {
+            //Ensures `from` is less than `to`
+            let `from` = from < to ? from : to
+            let `to` = to > from ? to : from
+            
+            let difference = to - from
+            
+            let randomNumber = arc4random_uniform(UInt32(difference))
+            
+            let result = Int(randomNumber) + from
+            
+            return result < to ? result : to
+        }
         
-        let difference = to - from
+        public static func positiveInteger() -> Int
+        {
+            return integer(from: 1, to: 100_000)
+        }
         
-        let randomNumber = arc4random_uniform(UInt32(difference))
+        public static func negativeInteger() -> Int
+        {
+            return integer(from: -100_000, to: -1)
+        }
         
-        let result = Int(randomNumber) + from
-        
-        return result < to ? result : to
+        public static func anyInteger() -> Int
+        {
+            return integer(from: -1_000, to: 1_000)
+        }
     }
     
-    static func positiveInteger() -> Int
-    {
-        return integer(from: 1, to: 100_000)
-    }
     
-    static func negativeInteger() -> Int
-    {
-        return integer(from: -100_000, to: -1)
-    }
-    
-    static func anyInteger() -> Int
-    {
-        return integer(from: -1_000, to: 1_000)
-    }
 }
