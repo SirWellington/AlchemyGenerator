@@ -13,6 +13,7 @@
 		DED06E7F1D83F97800C45BCF /* AlchemyGenerator+Integers.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED06E7E1D83F97800C45BCF /* AlchemyGenerator+Integers.swift */; };
 		DED06E811D83F98A00C45BCF /* AlchemyGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED06E801D83F98A00C45BCF /* AlchemyGenerator.swift */; };
 		DED06E851D8405D700C45BCF /* AlchemyGenerator+Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED06E841D8405D700C45BCF /* AlchemyGenerator+Strings.swift */; };
+		DED06E871D8408E600C45BCF /* AlchemyGeneratorStringTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED06E861D8408E600C45BCF /* AlchemyGeneratorStringTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +36,7 @@
 		DED06E7E1D83F97800C45BCF /* AlchemyGenerator+Integers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AlchemyGenerator+Integers.swift"; sourceTree = "<group>"; };
 		DED06E801D83F98A00C45BCF /* AlchemyGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlchemyGenerator.swift; sourceTree = "<group>"; };
 		DED06E841D8405D700C45BCF /* AlchemyGenerator+Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AlchemyGenerator+Strings.swift"; sourceTree = "<group>"; };
+		DED06E861D8408E600C45BCF /* AlchemyGeneratorStringTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlchemyGeneratorStringTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				DED06E711D83F7C400C45BCF /* AlchemyGeneratorTests.swift */,
+				DED06E861D8408E600C45BCF /* AlchemyGeneratorStringTests.swift */,
 				DED06E731D83F7C400C45BCF /* Info.plist */,
 			);
 			path = AlchemyGeneratorTests;
@@ -224,6 +227,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DED06E871D8408E600C45BCF /* AlchemyGeneratorStringTests.swift in Sources */,
 				DED06E721D83F7C400C45BCF /* AlchemyGeneratorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
