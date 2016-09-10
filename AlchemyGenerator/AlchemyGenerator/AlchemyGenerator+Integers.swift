@@ -26,4 +26,19 @@ public extension AlchemyGenerator
         
         return result < to ? result : to
     }
+    
+    static func positiveInteger() -> Int
+    {
+        return integer(from: 1, to: 100_000)
+    }
+    
+    static func negativeInteger() -> Int
+    {
+        return integer(from: -100_000, to: -1)
+    }
+    
+    static func anyInteger() -> Int
+    {
+        return integer(from: -1_000, to: 1_000)
+    }
 }

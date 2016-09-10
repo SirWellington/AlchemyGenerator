@@ -65,9 +65,9 @@ class AlchemyIntGeneratorTests: XCTestCase
     
     func testRandomNumberWithNegativeAndReversedParameters()
     {
-        var from = -100
-        var to = 0
-        var result = AlchemyGenerator.integer(from: to, to: from)
+        let from = -100
+        let to = 0
+        let result = AlchemyGenerator.integer(from: to, to: from)
         verify(withMin: from, max: to, result: result)
     }
     
@@ -75,5 +75,23 @@ class AlchemyIntGeneratorTests: XCTestCase
     {
         XCTAssertTrue(result >= min)
         XCTAssertTrue(result <= max)
+    }
+    
+    func testPositiveIntegers()
+    {
+        let result = AlchemyGenerator.positiveInteger()
+        XCTAssertTrue(result > 0)
+    }
+    
+    func testNegativeIntegers()
+    {
+        let result = AlchemyGenerator.negativeInteger()
+        XCTAssertTrue(result < 0)
+    }
+    
+    func testAnyInteger()
+    {
+        let result = AlchemyGenerator.anyInteger()
+        XCTAssertNotNil(result)
     }
 }
