@@ -23,17 +23,17 @@ class AlchemyIntGeneratorTests: XCTestCase
         var from = 0
         var to = 100
         
-        var result = AlchemyGenerator.Integers.any(from: from, to: to)
+        var result = AlchemyGenerator.Integers.integer(from: from, to: to)
         verify(withMin: from, max: to, result: result)
         
         from = 10
         to = 10_000
-        result = AlchemyGenerator.Integers.any(from: from, to: to)
+        result = AlchemyGenerator.Integers.integer(from: from, to: to)
         verify(withMin: from, max: to, result: result)
         
         from = 100
         to = 100_000_000
-        result = AlchemyGenerator.Integers.any(from: from, to: to)
+        result = AlchemyGenerator.Integers.integer(from: from, to: to)
         verify(withMin: from, max: to, result: result)
     }
     
@@ -42,7 +42,7 @@ class AlchemyIntGeneratorTests: XCTestCase
         let from = 0
         let to = 1000
         
-        let result = AlchemyGenerator.Integers.any(from: to, to: from)
+        let result = AlchemyGenerator.Integers.integer(from: to, to: from)
         verify(withMin: from, max: to, result: result)
     }
     
@@ -50,24 +50,24 @@ class AlchemyIntGeneratorTests: XCTestCase
     {
         var from = -100
         var to = -1
-        var result = AlchemyGenerator.Integers.any(from: from, to: to)
+        var result = AlchemyGenerator.Integers.integer(from: from, to: to)
         verify(withMin: from, max: to, result: result)
         
         from = -100_000
         to = 0
-        result = AlchemyGenerator.Integers.any(from: from, to: to)
+        result = AlchemyGenerator.Integers.integer(from: from, to: to)
         verify(withMin: from, max: to, result: result)
         
         from = -100
         to = 100
-        result = AlchemyGenerator.Integers.any(from: from, to: to)
+        result = AlchemyGenerator.Integers.integer(from: from, to: to)
     }
     
     func testRandomNumberWithNegativeAndReversedParameters()
     {
         let from = -100
         let to = 0
-        let result = AlchemyGenerator.Integers.any(from: to, to: from)
+        let result = AlchemyGenerator.Integers.integer(from: to, to: from)
         verify(withMin: from, max: to, result: result)
     }
     
