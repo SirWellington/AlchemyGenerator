@@ -12,7 +12,16 @@ import Foundation
 public extension AlchemyGenerator
 {
     
-    static func integer(from: Int, to: Int) -> Int
+    public class Integer
+    {
+        public static var any: Int { return AlchemyGenerator.anyInteger() }
+        
+        public static var positive: Int { return AlchemyGenerator.positiveInteger() }
+        
+        public static var negative: Int { return AlchemyGenerator.negativeInteger() }
+    }
+    
+    public static func integer(from: Int, to: Int) -> Int
     {
         //Ensures `from` is less than `to`
         let `from` = from < to ? from : to
@@ -27,17 +36,17 @@ public extension AlchemyGenerator
         return result < to ? result : to
     }
     
-    static func positiveInteger() -> Int
+    public static func positiveInteger() -> Int
     {
         return integer(from: 1, to: 100_000)
     }
     
-    static func negativeInteger() -> Int
+    public static func negativeInteger() -> Int
     {
         return integer(from: -100_000, to: -1)
     }
     
-    static func anyInteger() -> Int
+    public static func anyInteger() -> Int
     {
         return integer(from: -1_000, to: 1_000)
     }
