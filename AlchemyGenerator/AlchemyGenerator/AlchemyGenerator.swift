@@ -11,5 +11,5 @@ import Foundation
 
 public class AlchemyGenerator
 {
-    
+    private init() { }
 }
