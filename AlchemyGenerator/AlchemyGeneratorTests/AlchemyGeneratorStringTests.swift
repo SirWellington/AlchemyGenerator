@@ -112,11 +112,29 @@ class AlchemyStringGeneratorTests: XCTestCase
         }
     }
     
+    func testUUID()
+    {
+        self.repeat()
+        {
+            let result = AlchemyGenerator.uuidString()
+            let uuid = UUID.init(uuidString: result)
+            XCTAssertNotNil(uuid)
+        }
+    }
+    
     private func ensure(string: String, areCharactersIn set: [Character])
     {
         for character in string.characters
         {
             XCTAssert(set.contains(character), "Character \(character) is not in the expected set: \(set)")
+        }
+    }
+    
+    private func `repeat`(_ operation: () -> ())
+    {
+        for _ in (1...iterations)
+        {
+            operation()
         }
     }
 }

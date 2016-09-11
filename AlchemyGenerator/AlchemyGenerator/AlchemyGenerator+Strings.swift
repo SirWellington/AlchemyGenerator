@@ -91,6 +91,16 @@ public extension AlchemyGenerator
     }
 }
 
+//MARK: UUID Creation
+public extension AlchemyGenerator
+{
+    static func uuidString() -> String
+    {
+        let uuid = UUID.init()
+        return uuid.uuidString
+    }
+}
+
 
 //MARK: String Creation Methods
 fileprivate extension AlchemyGenerator
