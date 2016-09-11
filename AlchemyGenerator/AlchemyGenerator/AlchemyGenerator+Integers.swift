@@ -12,7 +12,7 @@ import Foundation
 public extension AlchemyGenerator
 {
     
-    public class Integer
+    public class Integers
     {
         public static var any: Int { return AlchemyGenerator.anyInteger() }
         

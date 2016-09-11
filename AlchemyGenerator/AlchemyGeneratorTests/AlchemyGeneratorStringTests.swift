@@ -35,6 +35,11 @@ class AlchemyStringGeneratorTests: XCTestCase
         return numeric
     }()
     
+    private var alphanumericCharacters: [Character]
+    {
+        return alphabeticalCharacters + numericCharacters
+    }
+    
     override func setUp()
     {
         size = AlchemyGenerator.integer(from: 10, to: 100)
@@ -55,6 +60,38 @@ class AlchemyStringGeneratorTests: XCTestCase
             XCTAssertEqual(result.characters.count, size)
             
             ensure(string: result, areCharactersIn: alphabeticalCharacters)
+        }
+    }
+    
+    func testAlphabeticalStringWithBadSize()
+    {
+        for _ in (1...iterations)
+        {
+            let badSize = AlchemyGenerator.integer(from: -10, to: 0)
+            let result = AlchemyGenerator.alphabeticString(ofSize: badSize)
+            XCTAssertTrue(result.isEmpty)
+        }
+    }
+    
+    func testAlphanumericString()
+    {
+        for _ in (1...iterations)
+        {
+            let result = AlchemyGenerator.alphanumericString(ofSize: size)
+            XCTAssertEqual(result.characters.count, size)
+            
+            ensure(string: result, areCharactersIn: alphanumericCharacters)
+        }
+    }
+    
+    func testAlphanumericStringWithBadSize()
+    {
+        for _ in (1...iterations)
+        {
+            let badSize = AlchemyGenerator.integer(from: -10, to: 0)
+            let result = AlchemyGenerator.alphanumericString(ofSize: badSize)
+            
+            XCTAssertTrue(result.isEmpty)
         }
     }
     
