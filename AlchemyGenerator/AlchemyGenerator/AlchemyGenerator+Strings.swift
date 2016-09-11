@@ -101,6 +101,17 @@ public extension AlchemyGenerator
     }
 }
 
+//MARK: Characters From Set
+public extension AlchemyGenerator
+{
+    static func stringFromList(_ list: [String]) -> String
+    {
+        guard !list.isEmpty else { return "" }
+        
+        let randomIndex = integer(from: 0, to: list.count - 1)
+        return list[randomIndex]
+    }
+}
 
 //MARK: String Creation Methods
 fileprivate extension AlchemyGenerator

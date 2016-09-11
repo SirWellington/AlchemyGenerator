@@ -122,6 +122,22 @@ class AlchemyStringGeneratorTests: XCTestCase
         }
     }
     
+    func testStringFromList()
+    {
+        var strings: [String] = []
+        
+        for _ in 1...size
+        {
+            strings.append(AlchemyGenerator.Strings.alphabetic)
+        }
+        
+        self.repeat()
+        {
+            let result = AlchemyGenerator.stringFromList(strings)
+            XCTAssertTrue(strings.contains(result))
+        }
+    }
+    
     private func ensure(string: String, areCharactersIn set: [Character])
     {
         for character in string.characters
