@@ -12,8 +12,8 @@ import XCTest
 
 class AlchemyStringGeneratorTests: XCTestCase
 {
-    private var size: Int = 0
-    private var iterations = 10
+    fileprivate var size: Int = 0
+    fileprivate var iterations = 10
     
     private let alphabeticalCharacters: [Character] =
     {
@@ -126,7 +126,19 @@ extension AlchemyStringGeneratorTests
 {
     func testStringsClass()
     {
-        let alphabetic = AlchemyGenerator.Strings.alphabetic
-        XCTAssertTrue(alphabetic.characters.count > 0)
+        for _ in (1...iterations)
+        {
+            checkNotEmpty(AlchemyGenerator.Strings.alphabetic)
+            checkNotEmpty(AlchemyGenerator.Strings.alphanumeric)
+            checkNotEmpty(AlchemyGenerator.Strings.hex)
+            checkNotEmpty(AlchemyGenerator.Strings.numeric)
+
+        }
+    
+    }
+    
+    func checkNotEmpty(_ string: String)
+    {
+        XCTAssertTrue(!string.isEmpty)
     }
 }
