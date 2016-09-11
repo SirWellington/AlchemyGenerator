@@ -50,13 +50,8 @@ public extension AlchemyGenerator
     {
         guard size > 0 else { return "" }
         
-        var result = ""
-        
-        for _ in (1...size)
-        {
-            let digit = AlchemyGenerator.integer(from: 0, to: 9)
-            result += "\(digit)"
-        }
+        let numeric = Characters.numeric
+        let result = createString(fromCharacterSet: numeric, ofSize: size)
         
         return result
     }
@@ -65,16 +60,8 @@ public extension AlchemyGenerator
     {
         guard size > 0 else { return "" }
         
-        let alphabetics = Array(Characters.alphabetic)
-        
-        var result = ""
-        for _ in (1...size)
-        {
-            let randomIndex = integer(from: 0, to: alphabetics.count - 1)
-            let randomCharacter = alphabetics[randomIndex]
-            result += "\(randomCharacter)"
-        }
-        
+        let alphabetic = Characters.alphabetic
+        let result = createString(fromCharacterSet: alphabetic, ofSize: size)
         return result
     }
     
@@ -82,16 +69,8 @@ public extension AlchemyGenerator
     {
         guard size > 0 else { return "" }
         
-        let alphanumerics = Array(Characters.alphanumeric)
-        
-        var result = ""
-        
-        for _ in (1...size)
-        {
-            let randomIndex = integer(from: 0, to: alphanumerics.count - 1)
-            let randomCharacter = alphanumerics[randomIndex]
-            result += "\(randomCharacter)"
-        }
+        let alphanumeric = Characters.alphanumeric
+        let result = createString(fromCharacterSet: alphanumeric, ofSize: size)
         
         return result
     }
