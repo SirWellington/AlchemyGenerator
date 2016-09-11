@@ -94,6 +94,11 @@ class AlchemyIntGeneratorTests: XCTestCase
         let result = AlchemyGenerator.anyInteger()
         XCTAssertNotNil(result)
     }
+}
+
+//MARK: Test Integer Class
+extension AlchemyIntGeneratorTests
+{
     
     func testIntegersClass()
     {

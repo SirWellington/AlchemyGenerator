@@ -40,6 +40,12 @@ class AlchemyStringGeneratorTests: XCTestCase
         return alphabeticalCharacters + numericCharacters
     }
     
+    private let hexCharacters: [Character] =
+    {
+       let characters = "0123456789ABCDEF"
+        return Array(characters.characters)
+    }()
+    
     override func setUp()
     {
         size = AlchemyGenerator.integer(from: 10, to: 100)
@@ -95,11 +101,32 @@ class AlchemyStringGeneratorTests: XCTestCase
         }
     }
     
+    func testHexStrings()
+    {
+        for _ in (1...iterations)
+        {
+            let result = AlchemyGenerator.hexString(ofSize: size)
+            XCTAssertEqual(result.characters.count, size)
+            
+            ensure(string: result, areCharactersIn: hexCharacters)
+        }
+    }
+    
     private func ensure(string: String, areCharactersIn set: [Character])
     {
         for character in string.characters
         {
             XCTAssert(set.contains(character), "Character \(character) is not in the expected set: \(set)")
         }
+    }
+}
+
+//MARK: Test Strings class
+extension AlchemyStringGeneratorTests
+{
+    func testStringsClass()
+    {
+        let alphabetic = AlchemyGenerator.Strings.alphabetic
+        XCTAssertTrue(alphabetic.characters.count > 0)
     }
 }
