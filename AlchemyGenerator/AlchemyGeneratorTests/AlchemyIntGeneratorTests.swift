@@ -95,5 +95,15 @@ class AlchemyIntGeneratorTests: XCTestCase
         XCTAssertNotNil(result)
     }
     
-    
+    func testIntegersClass()
+    {
+        let negative = AlchemyGenerator.Integers.negative
+        XCTAssertTrue(negative < 0)
+        
+        let positive = AlchemyGenerator.Integers.positive
+        XCTAssertTrue(positive > 0)
+        
+        let any = AlchemyGenerator.Integers.any
+        XCTAssertNotNil(any)
+    }
 }
