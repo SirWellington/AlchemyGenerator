@@ -11,7 +11,8 @@ import Foundation
 public extension AlchemyGenerator
 {
     
-    fileprivate static var defaultSize: Int {
+    fileprivate static var defaultSize: Int
+    {
         return AlchemyGenerator.integer(from: 5, to: 20)
     }
     
@@ -39,18 +40,20 @@ public extension AlchemyGenerator
     {
         guard size > 0 else { return "" }
         
-        let lowerCasedCharacters = "abcdefghijklmnopqrstuvwxyz"
-        let upperCasedCharacters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+        let lowerCasedCharacters = Set("abcdefghijklmnopqrstuvwxyz".characters)
+        let upperCasedCharacters = lowerCasedCharacters
+                .map() { String.init($0) }
+                .map() { $0.uppercased() }
+                .map() { $0.characters.first! }
         
-        let alphabetics = lowerCasedCharacters.components(separatedBy: "") +
-            upperCasedCharacters.components(separatedBy: "")
+        let alphabetics = lowerCasedCharacters + upperCasedCharacters
         
         var result = ""
         for _ in (1...size)
         {
             let randomIndex = integer(from: 0, to: alphabetics.count - 1)
             let randomCharacter = alphabetics[randomIndex]
-            result += randomCharacter
+            result += "\(randomCharacter)"
         }
         
         return result
