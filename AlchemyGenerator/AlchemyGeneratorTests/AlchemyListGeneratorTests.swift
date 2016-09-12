@@ -49,6 +49,8 @@ extension AlchemyListGeneratorTests
 {
     func testArraysClass()
     {
+        ensureNotEmpty(array: AlchemyGenerator.Arrays.ofAlphabeticString)
+        ensureNotEmpty(array: AlchemyGenerator.Arrays.ofAlphanumericString)
         ensureNotEmpty(array: AlchemyGenerator.Arrays.ofString)
         ensureNotEmpty(array: AlchemyGenerator.Arrays.ofIntegers)
         ensureNotEmpty(array: AlchemyGenerator.Arrays.ofPositiveIntegers)
