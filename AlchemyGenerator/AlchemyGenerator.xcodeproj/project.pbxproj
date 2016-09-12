@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DEBD162D1D8625DD00E5C4DD /* AlchemyGenerator+Lists.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBD162C1D8625DD00E5C4DD /* AlchemyGenerator+Lists.swift */; };
+		DEBD162F1D86282E00E5C4DD /* AlchemyListGeneratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBD162E1D86282E00E5C4DD /* AlchemyListGeneratorTests.swift */; };
 		DED06E6D1D83F7C400C45BCF /* AlchemyGenerator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DED06E631D83F7C400C45BCF /* AlchemyGenerator.framework */; };
 		DED06E741D83F7C400C45BCF /* AlchemyGenerator.h in Headers */ = {isa = PBXBuildFile; fileRef = DED06E661D83F7C400C45BCF /* AlchemyGenerator.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DED06E7F1D83F97800C45BCF /* AlchemyGenerator+Integers.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED06E7E1D83F97800C45BCF /* AlchemyGenerator+Integers.swift */; };
@@ -27,6 +29,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DEBD162C1D8625DD00E5C4DD /* AlchemyGenerator+Lists.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AlchemyGenerator+Lists.swift"; sourceTree = "<group>"; };
+		DEBD162E1D86282E00E5C4DD /* AlchemyListGeneratorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlchemyListGeneratorTests.swift; sourceTree = "<group>"; };
 		DED06E631D83F7C400C45BCF /* AlchemyGenerator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AlchemyGenerator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DED06E661D83F7C400C45BCF /* AlchemyGenerator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AlchemyGenerator.h; sourceTree = "<group>"; };
 		DED06E671D83F7C400C45BCF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -93,6 +97,7 @@
 				DED06E881D84093B00C45BCF /* AlchemyIntGeneratorTests.swift */,
 				DED06E861D8408E600C45BCF /* AlchemyGeneratorStringTests.swift */,
 				DED06E731D83F7C400C45BCF /* Info.plist */,
+				DEBD162E1D86282E00E5C4DD /* AlchemyListGeneratorTests.swift */,
 			);
 			path = AlchemyGeneratorTests;
 			sourceTree = "<group>";
@@ -102,6 +107,7 @@
 			children = (
 				DED06E7E1D83F97800C45BCF /* AlchemyGenerator+Integers.swift */,
 				DED06E841D8405D700C45BCF /* AlchemyGenerator+Strings.swift */,
+				DEBD162C1D8625DD00E5C4DD /* AlchemyGenerator+Lists.swift */,
 			);
 			name = Generators;
 			sourceTree = "<group>";
@@ -220,6 +226,7 @@
 				DED06E7F1D83F97800C45BCF /* AlchemyGenerator+Integers.swift in Sources */,
 				DED06E811D83F98A00C45BCF /* AlchemyGenerator.swift in Sources */,
 				DED06E851D8405D700C45BCF /* AlchemyGenerator+Strings.swift in Sources */,
+				DEBD162D1D8625DD00E5C4DD /* AlchemyGenerator+Lists.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -227,6 +234,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DEBD162F1D86282E00E5C4DD /* AlchemyListGeneratorTests.swift in Sources */,
 				DED06E891D84093B00C45BCF /* AlchemyIntGeneratorTests.swift in Sources */,
 				DED06E871D8408E600C45BCF /* AlchemyGeneratorStringTests.swift in Sources */,
 			);
@@ -427,6 +435,7 @@
 				DED06E791D83F7C400C45BCF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DED06E7A1D83F7C400C45BCF /* Build configuration list for PBXNativeTarget "AlchemyGeneratorTests" */ = {
 			isa = XCConfigurationList;
@@ -435,6 +444,7 @@
 				DED06E7C1D83F7C400C45BCF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
