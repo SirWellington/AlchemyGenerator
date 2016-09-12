@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "DED06E621D83F7C400C45BCF"
+               BlueprintIdentifier = "DEBD165F1D8635DA00E5C4DD"
                BuildableName = "AlchemyGenerator.framework"
                BlueprintName = "AlchemyGenerator"
                ReferencedContainer = "container:AlchemyGenerator.xcodeproj">
@@ -32,7 +32,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "DED06E6B1D83F7C400C45BCF"
+               BlueprintIdentifier = "DEBD16681D8635DB00E5C4DD"
                BuildableName = "AlchemyGeneratorTests.xctest"
                BlueprintName = "AlchemyGeneratorTests"
                ReferencedContainer = "container:AlchemyGenerator.xcodeproj">
@@ -42,7 +42,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "DED06E621D83F7C400C45BCF"
+            BlueprintIdentifier = "DEBD165F1D8635DA00E5C4DD"
             BuildableName = "AlchemyGenerator.framework"
             BlueprintName = "AlchemyGenerator"
             ReferencedContainer = "container:AlchemyGenerator.xcodeproj">
@@ -64,7 +64,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "DED06E621D83F7C400C45BCF"
+            BlueprintIdentifier = "DEBD165F1D8635DA00E5C4DD"
             BuildableName = "AlchemyGenerator.framework"
             BlueprintName = "AlchemyGenerator"
             ReferencedContainer = "container:AlchemyGenerator.xcodeproj">
@@ -82,7 +82,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "DED06E621D83F7C400C45BCF"
+            BlueprintIdentifier = "DEBD165F1D8635DA00E5C4DD"
             BuildableName = "AlchemyGenerator.framework"
             BlueprintName = "AlchemyGenerator"
             ReferencedContainer = "container:AlchemyGenerator.xcodeproj">

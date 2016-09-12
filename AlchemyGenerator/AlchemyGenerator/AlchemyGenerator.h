@@ -2,11 +2,11 @@
 //  AlchemyGenerator.h
 //  AlchemyGenerator
 //
-//  Created by Wellington Moreno on 9/10/16.
+//  Created by Wellington Moreno on 9/11/16.
 //  Copyright © 2016 Sir Wellington. All rights reserved.
 //
 
-#import <Cocoa/Cocoa.h>
+#import <UIKit/UIKit.h>
 
 //! Project version number for AlchemyGenerator.
 FOUNDATION_EXPORT double AlchemyGeneratorVersionNumber;

@@ -7,107 +7,107 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		DEBD162D1D8625DD00E5C4DD /* AlchemyGenerator+Lists.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBD162C1D8625DD00E5C4DD /* AlchemyGenerator+Lists.swift */; };
-		DEBD162F1D86282E00E5C4DD /* AlchemyListGeneratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBD162E1D86282E00E5C4DD /* AlchemyListGeneratorTests.swift */; };
-		DED06E6D1D83F7C400C45BCF /* AlchemyGenerator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DED06E631D83F7C400C45BCF /* AlchemyGenerator.framework */; };
-		DED06E741D83F7C400C45BCF /* AlchemyGenerator.h in Headers */ = {isa = PBXBuildFile; fileRef = DED06E661D83F7C400C45BCF /* AlchemyGenerator.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DED06E7F1D83F97800C45BCF /* AlchemyGenerator+Integers.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED06E7E1D83F97800C45BCF /* AlchemyGenerator+Integers.swift */; };
-		DED06E811D83F98A00C45BCF /* AlchemyGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED06E801D83F98A00C45BCF /* AlchemyGenerator.swift */; };
-		DED06E851D8405D700C45BCF /* AlchemyGenerator+Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED06E841D8405D700C45BCF /* AlchemyGenerator+Strings.swift */; };
-		DED06E871D8408E600C45BCF /* AlchemyGeneratorStringTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED06E861D8408E600C45BCF /* AlchemyGeneratorStringTests.swift */; };
-		DED06E891D84093B00C45BCF /* AlchemyIntGeneratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED06E881D84093B00C45BCF /* AlchemyIntGeneratorTests.swift */; };
+		DEBD166A1D8635DB00E5C4DD /* AlchemyGenerator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEBD16601D8635DA00E5C4DD /* AlchemyGenerator.framework */; };
+		DEBD16711D8635DB00E5C4DD /* AlchemyGenerator.h in Headers */ = {isa = PBXBuildFile; fileRef = DEBD16631D8635DA00E5C4DD /* AlchemyGenerator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DEBD167E1D8635EF00E5C4DD /* AlchemyGenerator+Integers.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBD167B1D8635EF00E5C4DD /* AlchemyGenerator+Integers.swift */; };
+		DEBD167F1D8635EF00E5C4DD /* AlchemyGenerator+Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBD167C1D8635EF00E5C4DD /* AlchemyGenerator+Strings.swift */; };
+		DEBD16801D8635EF00E5C4DD /* AlchemyGenerator+Lists.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBD167D1D8635EF00E5C4DD /* AlchemyGenerator+Lists.swift */; };
+		DEBD16821D8635F900E5C4DD /* AlchemyGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBD16811D8635F900E5C4DD /* AlchemyGenerator.swift */; };
+		DEBD16851D86360000E5C4DD /* AlchemyIntGeneratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBD16831D86360000E5C4DD /* AlchemyIntGeneratorTests.swift */; };
+		DEBD16861D86360000E5C4DD /* AlchemyGeneratorStringTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBD16841D86360000E5C4DD /* AlchemyGeneratorStringTests.swift */; };
+		DEBD16881D86360800E5C4DD /* AlchemyListGeneratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBD16871D86360800E5C4DD /* AlchemyListGeneratorTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		DED06E6E1D83F7C400C45BCF /* PBXContainerItemProxy */ = {
+		DEBD166B1D8635DB00E5C4DD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = DED06E5A1D83F7C400C45BCF /* Project object */;
+			containerPortal = DEBD16571D8635DA00E5C4DD /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = DED06E621D83F7C400C45BCF;
+			remoteGlobalIDString = DEBD165F1D8635DA00E5C4DD;
 			remoteInfo = AlchemyGenerator;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		DEBD162C1D8625DD00E5C4DD /* AlchemyGenerator+Lists.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AlchemyGenerator+Lists.swift"; sourceTree = "<group>"; };
-		DEBD162E1D86282E00E5C4DD /* AlchemyListGeneratorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlchemyListGeneratorTests.swift; sourceTree = "<group>"; };
-		DED06E631D83F7C400C45BCF /* AlchemyGenerator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AlchemyGenerator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		DED06E661D83F7C400C45BCF /* AlchemyGenerator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AlchemyGenerator.h; sourceTree = "<group>"; };
-		DED06E671D83F7C400C45BCF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DED06E6C1D83F7C400C45BCF /* AlchemyGeneratorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AlchemyGeneratorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		DED06E731D83F7C400C45BCF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DED06E7E1D83F97800C45BCF /* AlchemyGenerator+Integers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AlchemyGenerator+Integers.swift"; sourceTree = "<group>"; };
-		DED06E801D83F98A00C45BCF /* AlchemyGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlchemyGenerator.swift; sourceTree = "<group>"; };
-		DED06E841D8405D700C45BCF /* AlchemyGenerator+Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AlchemyGenerator+Strings.swift"; sourceTree = "<group>"; };
-		DED06E861D8408E600C45BCF /* AlchemyGeneratorStringTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlchemyGeneratorStringTests.swift; sourceTree = "<group>"; };
-		DED06E881D84093B00C45BCF /* AlchemyIntGeneratorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlchemyIntGeneratorTests.swift; sourceTree = "<group>"; };
+		DEBD16601D8635DA00E5C4DD /* AlchemyGenerator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AlchemyGenerator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DEBD16631D8635DA00E5C4DD /* AlchemyGenerator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AlchemyGenerator.h; sourceTree = "<group>"; };
+		DEBD16641D8635DA00E5C4DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DEBD16691D8635DB00E5C4DD /* AlchemyGeneratorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AlchemyGeneratorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DEBD16701D8635DB00E5C4DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DEBD167B1D8635EF00E5C4DD /* AlchemyGenerator+Integers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AlchemyGenerator+Integers.swift"; sourceTree = "<group>"; };
+		DEBD167C1D8635EF00E5C4DD /* AlchemyGenerator+Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AlchemyGenerator+Strings.swift"; sourceTree = "<group>"; };
+		DEBD167D1D8635EF00E5C4DD /* AlchemyGenerator+Lists.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AlchemyGenerator+Lists.swift"; sourceTree = "<group>"; };
+		DEBD16811D8635F900E5C4DD /* AlchemyGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlchemyGenerator.swift; sourceTree = "<group>"; };
+		DEBD16831D86360000E5C4DD /* AlchemyIntGeneratorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlchemyIntGeneratorTests.swift; sourceTree = "<group>"; };
+		DEBD16841D86360000E5C4DD /* AlchemyGeneratorStringTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlchemyGeneratorStringTests.swift; sourceTree = "<group>"; };
+		DEBD16871D86360800E5C4DD /* AlchemyListGeneratorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlchemyListGeneratorTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		DED06E5F1D83F7C400C45BCF /* Frameworks */ = {
+		DEBD165C1D8635DA00E5C4DD /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DED06E691D83F7C400C45BCF /* Frameworks */ = {
+		DEBD16661D8635DB00E5C4DD /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DED06E6D1D83F7C400C45BCF /* AlchemyGenerator.framework in Frameworks */,
+				DEBD166A1D8635DB00E5C4DD /* AlchemyGenerator.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		DED06E591D83F7C400C45BCF = {
+		DEBD16561D8635DA00E5C4DD = {
 			isa = PBXGroup;
 			children = (
-				DED06E651D83F7C400C45BCF /* AlchemyGenerator */,
-				DED06E701D83F7C400C45BCF /* AlchemyGeneratorTests */,
-				DED06E641D83F7C400C45BCF /* Products */,
+				DEBD16621D8635DA00E5C4DD /* AlchemyGenerator */,
+				DEBD166D1D8635DB00E5C4DD /* AlchemyGeneratorTests */,
+				DEBD16611D8635DA00E5C4DD /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		DED06E641D83F7C400C45BCF /* Products */ = {
+		DEBD16611D8635DA00E5C4DD /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				DED06E631D83F7C400C45BCF /* AlchemyGenerator.framework */,
-				DED06E6C1D83F7C400C45BCF /* AlchemyGeneratorTests.xctest */,
+				DEBD16601D8635DA00E5C4DD /* AlchemyGenerator.framework */,
+				DEBD16691D8635DB00E5C4DD /* AlchemyGeneratorTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		DED06E651D83F7C400C45BCF /* AlchemyGenerator */ = {
+		DEBD16621D8635DA00E5C4DD /* AlchemyGenerator */ = {
 			isa = PBXGroup;
 			children = (
-				DED06E7D1D83F95B00C45BCF /* Generators */,
-				DED06E661D83F7C400C45BCF /* AlchemyGenerator.h */,
-				DED06E671D83F7C400C45BCF /* Info.plist */,
-				DED06E801D83F98A00C45BCF /* AlchemyGenerator.swift */,
+				DEBD167A1D8635E500E5C4DD /* Generators */,
+				DEBD16631D8635DA00E5C4DD /* AlchemyGenerator.h */,
+				DEBD16811D8635F900E5C4DD /* AlchemyGenerator.swift */,
+				DEBD16641D8635DA00E5C4DD /* Info.plist */,
 			);
 			path = AlchemyGenerator;
 			sourceTree = "<group>";
 		};
-		DED06E701D83F7C400C45BCF /* AlchemyGeneratorTests */ = {
+		DEBD166D1D8635DB00E5C4DD /* AlchemyGeneratorTests */ = {
 			isa = PBXGroup;
 			children = (
-				DED06E881D84093B00C45BCF /* AlchemyIntGeneratorTests.swift */,
-				DED06E861D8408E600C45BCF /* AlchemyGeneratorStringTests.swift */,
-				DED06E731D83F7C400C45BCF /* Info.plist */,
-				DEBD162E1D86282E00E5C4DD /* AlchemyListGeneratorTests.swift */,
+				DEBD16831D86360000E5C4DD /* AlchemyIntGeneratorTests.swift */,
+				DEBD16841D86360000E5C4DD /* AlchemyGeneratorStringTests.swift */,
+				DEBD16871D86360800E5C4DD /* AlchemyListGeneratorTests.swift */,
+				DEBD16701D8635DB00E5C4DD /* Info.plist */,
 			);
 			path = AlchemyGeneratorTests;
 			sourceTree = "<group>";
 		};
-		DED06E7D1D83F95B00C45BCF /* Generators */ = {
+		DEBD167A1D8635E500E5C4DD /* Generators */ = {
 			isa = PBXGroup;
 			children = (
-				DED06E7E1D83F97800C45BCF /* AlchemyGenerator+Integers.swift */,
-				DED06E841D8405D700C45BCF /* AlchemyGenerator+Strings.swift */,
-				DEBD162C1D8625DD00E5C4DD /* AlchemyGenerator+Lists.swift */,
+				DEBD167B1D8635EF00E5C4DD /* AlchemyGenerator+Integers.swift */,
+				DEBD167C1D8635EF00E5C4DD /* AlchemyGenerator+Strings.swift */,
+				DEBD167D1D8635EF00E5C4DD /* AlchemyGenerator+Lists.swift */,
 			);
 			name = Generators;
 			sourceTree = "<group>";
@@ -115,25 +115,25 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		DED06E601D83F7C400C45BCF /* Headers */ = {
+		DEBD165D1D8635DA00E5C4DD /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DED06E741D83F7C400C45BCF /* AlchemyGenerator.h in Headers */,
+				DEBD16711D8635DB00E5C4DD /* AlchemyGenerator.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		DED06E621D83F7C400C45BCF /* AlchemyGenerator */ = {
+		DEBD165F1D8635DA00E5C4DD /* AlchemyGenerator */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DED06E771D83F7C400C45BCF /* Build configuration list for PBXNativeTarget "AlchemyGenerator" */;
+			buildConfigurationList = DEBD16741D8635DB00E5C4DD /* Build configuration list for PBXNativeTarget "AlchemyGenerator" */;
 			buildPhases = (
-				DED06E5E1D83F7C400C45BCF /* Sources */,
-				DED06E5F1D83F7C400C45BCF /* Frameworks */,
-				DED06E601D83F7C400C45BCF /* Headers */,
-				DED06E611D83F7C400C45BCF /* Resources */,
+				DEBD165B1D8635DA00E5C4DD /* Sources */,
+				DEBD165C1D8635DA00E5C4DD /* Frameworks */,
+				DEBD165D1D8635DA00E5C4DD /* Headers */,
+				DEBD165E1D8635DA00E5C4DD /* Resources */,
 			);
 			buildRules = (
 			);
@@ -141,75 +141,75 @@
 			);
 			name = AlchemyGenerator;
 			productName = AlchemyGenerator;
-			productReference = DED06E631D83F7C400C45BCF /* AlchemyGenerator.framework */;
+			productReference = DEBD16601D8635DA00E5C4DD /* AlchemyGenerator.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		DED06E6B1D83F7C400C45BCF /* AlchemyGeneratorTests */ = {
+		DEBD16681D8635DB00E5C4DD /* AlchemyGeneratorTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DED06E7A1D83F7C400C45BCF /* Build configuration list for PBXNativeTarget "AlchemyGeneratorTests" */;
+			buildConfigurationList = DEBD16771D8635DB00E5C4DD /* Build configuration list for PBXNativeTarget "AlchemyGeneratorTests" */;
 			buildPhases = (
-				DED06E681D83F7C400C45BCF /* Sources */,
-				DED06E691D83F7C400C45BCF /* Frameworks */,
-				DED06E6A1D83F7C400C45BCF /* Resources */,
+				DEBD16651D8635DB00E5C4DD /* Sources */,
+				DEBD16661D8635DB00E5C4DD /* Frameworks */,
+				DEBD16671D8635DB00E5C4DD /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				DED06E6F1D83F7C400C45BCF /* PBXTargetDependency */,
+				DEBD166C1D8635DB00E5C4DD /* PBXTargetDependency */,
 			);
 			name = AlchemyGeneratorTests;
 			productName = AlchemyGeneratorTests;
-			productReference = DED06E6C1D83F7C400C45BCF /* AlchemyGeneratorTests.xctest */;
+			productReference = DEBD16691D8635DB00E5C4DD /* AlchemyGeneratorTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		DED06E5A1D83F7C400C45BCF /* Project object */ = {
+		DEBD16571D8635DA00E5C4DD /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0800;
 				LastUpgradeCheck = 0800;
-				ORGANIZATIONNAME = "Sir Wellington";
+				ORGANIZATIONNAME = SirWellington;
 				TargetAttributes = {
-					DED06E621D83F7C400C45BCF = {
+					DEBD165F1D8635DA00E5C4DD = {
 						CreatedOnToolsVersion = 8.0;
 						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 					};
-					DED06E6B1D83F7C400C45BCF = {
+					DEBD16681D8635DB00E5C4DD = {
 						CreatedOnToolsVersion = 8.0;
 						ProvisioningStyle = Automatic;
 					};
 				};
 			};
-			buildConfigurationList = DED06E5D1D83F7C400C45BCF /* Build configuration list for PBXProject "AlchemyGenerator" */;
+			buildConfigurationList = DEBD165A1D8635DA00E5C4DD /* Build configuration list for PBXProject "AlchemyGenerator" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = DED06E591D83F7C400C45BCF;
-			productRefGroup = DED06E641D83F7C400C45BCF /* Products */;
+			mainGroup = DEBD16561D8635DA00E5C4DD;
+			productRefGroup = DEBD16611D8635DA00E5C4DD /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				DED06E621D83F7C400C45BCF /* AlchemyGenerator */,
-				DED06E6B1D83F7C400C45BCF /* AlchemyGeneratorTests */,
+				DEBD165F1D8635DA00E5C4DD /* AlchemyGenerator */,
+				DEBD16681D8635DB00E5C4DD /* AlchemyGeneratorTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		DED06E611D83F7C400C45BCF /* Resources */ = {
+		DEBD165E1D8635DA00E5C4DD /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DED06E6A1D83F7C400C45BCF /* Resources */ = {
+		DEBD16671D8635DB00E5C4DD /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -219,39 +219,39 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		DED06E5E1D83F7C400C45BCF /* Sources */ = {
+		DEBD165B1D8635DA00E5C4DD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DED06E7F1D83F97800C45BCF /* AlchemyGenerator+Integers.swift in Sources */,
-				DED06E811D83F98A00C45BCF /* AlchemyGenerator.swift in Sources */,
-				DED06E851D8405D700C45BCF /* AlchemyGenerator+Strings.swift in Sources */,
-				DEBD162D1D8625DD00E5C4DD /* AlchemyGenerator+Lists.swift in Sources */,
+				DEBD167F1D8635EF00E5C4DD /* AlchemyGenerator+Strings.swift in Sources */,
+				DEBD167E1D8635EF00E5C4DD /* AlchemyGenerator+Integers.swift in Sources */,
+				DEBD16801D8635EF00E5C4DD /* AlchemyGenerator+Lists.swift in Sources */,
+				DEBD16821D8635F900E5C4DD /* AlchemyGenerator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DED06E681D83F7C400C45BCF /* Sources */ = {
+		DEBD16651D8635DB00E5C4DD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DEBD162F1D86282E00E5C4DD /* AlchemyListGeneratorTests.swift in Sources */,
-				DED06E891D84093B00C45BCF /* AlchemyIntGeneratorTests.swift in Sources */,
-				DED06E871D8408E600C45BCF /* AlchemyGeneratorStringTests.swift in Sources */,
+				DEBD16881D86360800E5C4DD /* AlchemyListGeneratorTests.swift in Sources */,
+				DEBD16861D86360000E5C4DD /* AlchemyGeneratorStringTests.swift in Sources */,
+				DEBD16851D86360000E5C4DD /* AlchemyIntGeneratorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		DED06E6F1D83F7C400C45BCF /* PBXTargetDependency */ = {
+		DEBD166C1D8635DB00E5C4DD /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = DED06E621D83F7C400C45BCF /* AlchemyGenerator */;
-			targetProxy = DED06E6E1D83F7C400C45BCF /* PBXContainerItemProxy */;
+			target = DEBD165F1D8635DA00E5C4DD /* AlchemyGenerator */;
+			targetProxy = DEBD166B1D8635DB00E5C4DD /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		DED06E751D83F7C400C45BCF /* Debug */ = {
+		DEBD16721D8635DB00E5C4DD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -272,7 +272,7 @@
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -292,18 +292,19 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = macosx;
+				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
-		DED06E761D83F7C400C45BCF /* Release */ = {
+		DEBD16731D8635DB00E5C4DD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -324,7 +325,7 @@
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -338,29 +339,29 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				SDKROOT = macosx;
+				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
-		DED06E781D83F7C400C45BCF /* Debug */ = {
+		DEBD16751D8635DB00E5C4DD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
-				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = AlchemyGenerator/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = tech.sirwellington.AlchemyGenerator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -369,20 +370,18 @@
 			};
 			name = Debug;
 		};
-		DED06E791D83F7C400C45BCF /* Release */ = {
+		DEBD16761D8635DB00E5C4DD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
-				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = AlchemyGenerator/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = tech.sirwellington.AlchemyGenerator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -390,26 +389,24 @@
 			};
 			name = Release;
 		};
-		DED06E7B1D83F7C400C45BCF /* Debug */ = {
+		DEBD16781D8635DB00E5C4DD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = AlchemyGeneratorTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = tech.sirwellington.AlchemyGeneratorTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
-		DED06E7C1D83F7C400C45BCF /* Release */ = {
+		DEBD16791D8635DB00E5C4DD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = AlchemyGeneratorTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = tech.sirwellington.AlchemyGeneratorTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
@@ -419,34 +416,34 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		DED06E5D1D83F7C400C45BCF /* Build configuration list for PBXProject "AlchemyGenerator" */ = {
+		DEBD165A1D8635DA00E5C4DD /* Build configuration list for PBXProject "AlchemyGenerator" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				DED06E751D83F7C400C45BCF /* Debug */,
-				DED06E761D83F7C400C45BCF /* Release */,
+				DEBD16721D8635DB00E5C4DD /* Debug */,
+				DEBD16731D8635DB00E5C4DD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DED06E771D83F7C400C45BCF /* Build configuration list for PBXNativeTarget "AlchemyGenerator" */ = {
+		DEBD16741D8635DB00E5C4DD /* Build configuration list for PBXNativeTarget "AlchemyGenerator" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				DED06E781D83F7C400C45BCF /* Debug */,
-				DED06E791D83F7C400C45BCF /* Release */,
+				DEBD16751D8635DB00E5C4DD /* Debug */,
+				DEBD16761D8635DB00E5C4DD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DED06E7A1D83F7C400C45BCF /* Build configuration list for PBXNativeTarget "AlchemyGeneratorTests" */ = {
+		DEBD16771D8635DB00E5C4DD /* Build configuration list for PBXNativeTarget "AlchemyGeneratorTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				DED06E7B1D83F7C400C45BCF /* Debug */,
-				DED06E7C1D83F7C400C45BCF /* Release */,
+				DEBD16781D8635DB00E5C4DD /* Debug */,
+				DEBD16791D8635DB00E5C4DD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = DED06E5A1D83F7C400C45BCF /* Project object */;
+	rootObject = DEBD16571D8635DA00E5C4DD /* Project object */;
 }
