@@ -21,6 +21,16 @@ public extension AlchemyGenerator
             }
         }
         
+        public static var ofAlphabeticString: [String]
+        {
+            return AlchemyGenerator.array() { AlchemyGenerator.alphabeticString() }
+        }
+        
+        public static var ofAlphanumericString: [String]
+        {
+            return AlchemyGenerator.array() { AlchemyGenerator.alphanumericString() }
+         }
+        
         public static var ofIntegers: [Int]
         {
             return AlchemyGenerator.array(withCreator: AlchemyGenerator.anyInteger)
