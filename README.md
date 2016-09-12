@@ -117,7 +117,6 @@ let stringFromList = AlchemyGenerator.stringFrom(list: ["admit", "learn", "let i
 
 ## Binary
 
-
 ### Bytes
 > Coming soon
 
@@ -277,7 +276,7 @@ int port = one(ports());
 
 
 # Feature Requests
-Feature Requests are definitely welcomed! **Please drop a note in [Issues](https://github.com/SirWellington/alchemy-generator/issues).**
+Feature Requests are definitely welcomed! **Please drop a note in [Issues](https://github.com/SirWellington/alchemy-generator-swift/issues).**
 
 # Release Notes
 
