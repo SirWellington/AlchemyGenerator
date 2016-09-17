@@ -4,7 +4,7 @@ Alchemy Generator
 [<img src="https://raw.githubusercontent.com/SirWellington/alchemy/develop/Graphics/Logo/Alchemy-Logo-v7-name.png" width="200">](https://github.com/SirWellington/alchemy)
 
 ## "More Data => Better tests"
-
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage) [![Build Status](https://travis-ci.org/SirWellington/AlchemyGenerator.svg?branch=develop)](https://travis-ci.org/SirWellington/AlchemyGenerator)
 
 
 # Purpose
