@@ -81,4 +81,13 @@ public extension AlchemyGenerator
         
         return result
     }
+    
+    static func anyOf<T>(_ array: [T]) -> T?
+    {
+        guard !array.isEmpty else { return nil }
+        
+        let index = integer(from: 0, to: array.count - 1)
+        
+        return array[index]
+    }
 }

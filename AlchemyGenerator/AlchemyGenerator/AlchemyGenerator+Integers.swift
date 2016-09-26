@@ -21,6 +21,13 @@ public extension AlchemyGenerator
         public static var negative: Int { return AlchemyGenerator.negativeInteger() }
     }
     
+    /**
+        Returns a random integer from `from`(inclusively) to `to`(inclusively)
+     
+        - parameter from: Must be `< to` (inclusive)
+        - parameter to: Must be `> from` (inclusive)
+     
+    */
     public static func integer(from: Int, to: Int) -> Int
     {
         //Ensures `from` is less than `to`

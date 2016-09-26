@@ -35,6 +35,18 @@ class AlchemyListGeneratorTests: XCTestCase
         }
     }
     
+    func testAnyElement()
+    {
+        self.repeat
+        {
+            let array = AlchemyGenerator.Arrays.ofAlphanumericString
+            
+            let element = AlchemyGenerator.anyOf(array)
+            XCTAssertFalse(element == nil)
+            XCTAssertTrue(array.contains(element!))
+        }
+    }
+    
     fileprivate func `repeat`(_ operation: () -> ())
     {
         for _ in 1...iterations
