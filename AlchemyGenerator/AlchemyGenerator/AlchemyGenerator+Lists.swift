@@ -86,7 +86,7 @@ public extension AlchemyGenerator
     {
         guard !array.isEmpty else { return nil }
         
-        let index = integer(from: 0, to: array.count - 1)
+        let index = integer(from: 0, to: array.count)
         
         return array[index]
     }
