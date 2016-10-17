@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DE71C3B31DB492EF00746C6E /* AlchemyGeneratorOSX.h in Headers */ = {isa = PBXBuildFile; fileRef = DE71C3B11DB492EF00746C6E /* AlchemyGeneratorOSX.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DE71C3B71DB4930900746C6E /* AlchemyGenerator+Integers.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBD167B1D8635EF00E5C4DD /* AlchemyGenerator+Integers.swift */; };
+		DE71C3B81DB4930900746C6E /* AlchemyGenerator+Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBD167C1D8635EF00E5C4DD /* AlchemyGenerator+Strings.swift */; };
+		DE71C3B91DB4930900746C6E /* AlchemyGenerator+Lists.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBD167D1D8635EF00E5C4DD /* AlchemyGenerator+Lists.swift */; };
+		DE71C3BA1DB4930C00746C6E /* AlchemyGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBD16811D8635F900E5C4DD /* AlchemyGenerator.swift */; };
 		DEBD166A1D8635DB00E5C4DD /* AlchemyGenerator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEBD16601D8635DA00E5C4DD /* AlchemyGenerator.framework */; };
 		DEBD16711D8635DB00E5C4DD /* AlchemyGenerator.h in Headers */ = {isa = PBXBuildFile; fileRef = DEBD16631D8635DA00E5C4DD /* AlchemyGenerator.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DEBD167E1D8635EF00E5C4DD /* AlchemyGenerator+Integers.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBD167B1D8635EF00E5C4DD /* AlchemyGenerator+Integers.swift */; };
@@ -29,6 +34,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DE71C3AF1DB492EE00746C6E /* AlchemyGeneratorOSX.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AlchemyGeneratorOSX.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE71C3B11DB492EF00746C6E /* AlchemyGeneratorOSX.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AlchemyGeneratorOSX.h; sourceTree = "<group>"; };
+		DE71C3B21DB492EF00746C6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DEBD16601D8635DA00E5C4DD /* AlchemyGenerator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AlchemyGenerator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEBD16631D8635DA00E5C4DD /* AlchemyGenerator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AlchemyGenerator.h; sourceTree = "<group>"; };
 		DEBD16641D8635DA00E5C4DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -44,6 +52,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		DE71C3AB1DB492EE00746C6E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DEBD165C1D8635DA00E5C4DD /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -62,11 +77,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DE71C3B01DB492EF00746C6E /* AlchemyGeneratorOSX */ = {
+			isa = PBXGroup;
+			children = (
+				DE71C3B11DB492EF00746C6E /* AlchemyGeneratorOSX.h */,
+				DE71C3B21DB492EF00746C6E /* Info.plist */,
+			);
+			path = AlchemyGeneratorOSX;
+			sourceTree = "<group>";
+		};
 		DEBD16561D8635DA00E5C4DD = {
 			isa = PBXGroup;
 			children = (
 				DEBD16621D8635DA00E5C4DD /* AlchemyGenerator */,
 				DEBD166D1D8635DB00E5C4DD /* AlchemyGeneratorTests */,
+				DE71C3B01DB492EF00746C6E /* AlchemyGeneratorOSX */,
 				DEBD16611D8635DA00E5C4DD /* Products */,
 			);
 			sourceTree = "<group>";
@@ -76,6 +101,7 @@
 			children = (
 				DEBD16601D8635DA00E5C4DD /* AlchemyGenerator.framework */,
 				DEBD16691D8635DB00E5C4DD /* AlchemyGeneratorTests.xctest */,
+				DE71C3AF1DB492EE00746C6E /* AlchemyGeneratorOSX.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -115,6 +141,14 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		DE71C3AC1DB492EE00746C6E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE71C3B31DB492EF00746C6E /* AlchemyGeneratorOSX.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DEBD165D1D8635DA00E5C4DD /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -126,6 +160,24 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		DE71C3AE1DB492EE00746C6E /* AlchemyGeneratorOSX */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DE71C3B61DB492EF00746C6E /* Build configuration list for PBXNativeTarget "AlchemyGeneratorOSX" */;
+			buildPhases = (
+				DE71C3AA1DB492EE00746C6E /* Sources */,
+				DE71C3AB1DB492EE00746C6E /* Frameworks */,
+				DE71C3AC1DB492EE00746C6E /* Headers */,
+				DE71C3AD1DB492EE00746C6E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AlchemyGeneratorOSX;
+			productName = AlchemyGeneratorOSX;
+			productReference = DE71C3AF1DB492EE00746C6E /* AlchemyGeneratorOSX.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		DEBD165F1D8635DA00E5C4DD /* AlchemyGenerator */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = DEBD16741D8635DB00E5C4DD /* Build configuration list for PBXNativeTarget "AlchemyGenerator" */;
@@ -172,6 +224,10 @@
 				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = SirWellington;
 				TargetAttributes = {
+					DE71C3AE1DB492EE00746C6E = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+					};
 					DEBD165F1D8635DA00E5C4DD = {
 						CreatedOnToolsVersion = 8.0;
 						LastSwiftMigration = 0800;
@@ -196,12 +252,20 @@
 			projectRoot = "";
 			targets = (
 				DEBD165F1D8635DA00E5C4DD /* AlchemyGenerator */,
+				DE71C3AE1DB492EE00746C6E /* AlchemyGeneratorOSX */,
 				DEBD16681D8635DB00E5C4DD /* AlchemyGeneratorTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		DE71C3AD1DB492EE00746C6E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DEBD165E1D8635DA00E5C4DD /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -219,6 +283,17 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		DE71C3AA1DB492EE00746C6E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE71C3BA1DB4930C00746C6E /* AlchemyGenerator.swift in Sources */,
+				DE71C3B71DB4930900746C6E /* AlchemyGenerator+Integers.swift in Sources */,
+				DE71C3B81DB4930900746C6E /* AlchemyGenerator+Strings.swift in Sources */,
+				DE71C3B91DB4930900746C6E /* AlchemyGenerator+Lists.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DEBD165B1D8635DA00E5C4DD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -251,6 +326,50 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		DE71C3B41DB492EF00746C6E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = AlchemyGeneratorOSX/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_BUNDLE_IDENTIFIER = tech.sirwellington.alchemy.AlchemyGeneratorOSX;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		DE71C3B51DB492EF00746C6E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = AlchemyGeneratorOSX/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_BUNDLE_IDENTIFIER = tech.sirwellington.alchemy.AlchemyGeneratorOSX;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
 		DEBD16721D8635DB00E5C4DD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -362,7 +481,7 @@
 				INFOPLIST_FILE = AlchemyGenerator/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = tech.sirwellington.AlchemyGenerator;
+				PRODUCT_BUNDLE_IDENTIFIER = tech.sirwellington.alchemy.AlchemyGenerator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -382,7 +501,7 @@
 				INFOPLIST_FILE = AlchemyGenerator/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = tech.sirwellington.AlchemyGenerator;
+				PRODUCT_BUNDLE_IDENTIFIER = tech.sirwellington.alchemy.AlchemyGenerator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
@@ -416,6 +535,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		DE71C3B61DB492EF00746C6E /* Build configuration list for PBXNativeTarget "AlchemyGeneratorOSX" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE71C3B41DB492EF00746C6E /* Debug */,
+				DE71C3B51DB492EF00746C6E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		DEBD165A1D8635DA00E5C4DD /* Build configuration list for PBXProject "AlchemyGenerator" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
