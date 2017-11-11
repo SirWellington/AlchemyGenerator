@@ -16,6 +16,8 @@
 		DEBD16851D86360000E5C4DD /* AlchemyIntGeneratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBD16831D86360000E5C4DD /* AlchemyIntGeneratorTests.swift */; };
 		DEBD16861D86360000E5C4DD /* AlchemyGeneratorStringTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBD16841D86360000E5C4DD /* AlchemyGeneratorStringTests.swift */; };
 		DEBD16881D86360800E5C4DD /* AlchemyListGeneratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBD16871D86360800E5C4DD /* AlchemyListGeneratorTests.swift */; };
+		DEC448321FB6BE27002D67DB /* AlchemyGenerator+Doubles.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC448311FB6BE27002D67DB /* AlchemyGenerator+Doubles.swift */; };
+		DEC448341FB6C033002D67DB /* AlchemyGeneratorDoubleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC448331FB6C033002D67DB /* AlchemyGeneratorDoubleTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +43,8 @@
 		DEBD16831D86360000E5C4DD /* AlchemyIntGeneratorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlchemyIntGeneratorTests.swift; sourceTree = "<group>"; };
 		DEBD16841D86360000E5C4DD /* AlchemyGeneratorStringTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlchemyGeneratorStringTests.swift; sourceTree = "<group>"; };
 		DEBD16871D86360800E5C4DD /* AlchemyListGeneratorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlchemyListGeneratorTests.swift; sourceTree = "<group>"; };
+		DEC448311FB6BE27002D67DB /* AlchemyGenerator+Doubles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AlchemyGenerator+Doubles.swift"; sourceTree = "<group>"; };
+		DEC448331FB6C033002D67DB /* AlchemyGeneratorDoubleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlchemyGeneratorDoubleTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,8 +98,9 @@
 		DEBD166D1D8635DB00E5C4DD /* AlchemyGeneratorTests */ = {
 			isa = PBXGroup;
 			children = (
-				DEBD16831D86360000E5C4DD /* AlchemyIntGeneratorTests.swift */,
+				DEC448331FB6C033002D67DB /* AlchemyGeneratorDoubleTests.swift */,
 				DEBD16841D86360000E5C4DD /* AlchemyGeneratorStringTests.swift */,
+				DEBD16831D86360000E5C4DD /* AlchemyIntGeneratorTests.swift */,
 				DEBD16871D86360800E5C4DD /* AlchemyListGeneratorTests.swift */,
 				DEBD16701D8635DB00E5C4DD /* Info.plist */,
 			);
@@ -105,9 +110,10 @@
 		DEBD167A1D8635E500E5C4DD /* Generators */ = {
 			isa = PBXGroup;
 			children = (
+				DEC448311FB6BE27002D67DB /* AlchemyGenerator+Doubles.swift */,
 				DEBD167B1D8635EF00E5C4DD /* AlchemyGenerator+Integers.swift */,
-				DEBD167C1D8635EF00E5C4DD /* AlchemyGenerator+Strings.swift */,
 				DEBD167D1D8635EF00E5C4DD /* AlchemyGenerator+Lists.swift */,
+				DEBD167C1D8635EF00E5C4DD /* AlchemyGenerator+Strings.swift */,
 			);
 			name = Generators;
 			sourceTree = "<group>";
@@ -227,6 +233,7 @@
 				DEBD167E1D8635EF00E5C4DD /* AlchemyGenerator+Integers.swift in Sources */,
 				DEBD16801D8635EF00E5C4DD /* AlchemyGenerator+Lists.swift in Sources */,
 				DEBD16821D8635F900E5C4DD /* AlchemyGenerator.swift in Sources */,
+				DEC448321FB6BE27002D67DB /* AlchemyGenerator+Doubles.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -234,6 +241,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DEC448341FB6C033002D67DB /* AlchemyGeneratorDoubleTests.swift in Sources */,
 				DEBD16881D86360800E5C4DD /* AlchemyListGeneratorTests.swift in Sources */,
 				DEBD16861D86360000E5C4DD /* AlchemyGeneratorStringTests.swift in Sources */,
 				DEBD16851D86360000E5C4DD /* AlchemyIntGeneratorTests.swift in Sources */,

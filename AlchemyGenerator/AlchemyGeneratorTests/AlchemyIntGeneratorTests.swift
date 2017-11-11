@@ -20,21 +20,9 @@ class AlchemyIntGeneratorTests: XCTestCase
     
     func testRandomNumberWithPositive()
     {
-        var from = 0
-        var to = 100
-        
-        var result = AlchemyGenerator.integer(from: from, to: to)
-        verify(withMin: from, max: to, result: result)
-        
-        from = 10
-        to = 10_000
-        result = AlchemyGenerator.integer(from: from, to: to)
-        verify(withMin: from, max: to, result: result)
-        
-        from = 100
-        to = 100_000_000
-        result = AlchemyGenerator.integer(from: from, to: to)
-        verify(withMin: from, max: to, result: result)
+        testRandomWith(min: 0, max: 100)
+        testRandomWith(min: 10, max: 10_000)
+        testRandomWith(min: 100, max: 100_000_000)
     }
     
     func testRandomNumberWithReversedParameters()
@@ -48,27 +36,20 @@ class AlchemyIntGeneratorTests: XCTestCase
     
     func testRandomNumberWithNegative()
     {
-        var from = -100
-        var to = -1
-        var result = AlchemyGenerator.integer(from: from, to: to)
-        verify(withMin: from, max: to, result: result)
-        
-        from = -100_000
-        to = 0
-        result = AlchemyGenerator.integer(from: from, to: to)
-        verify(withMin: from, max: to, result: result)
-        
-        from = -100
-        to = 100
-        result = AlchemyGenerator.integer(from: from, to: to)
+        testRandomWith(min: -100, max: -1)
+        testRandomWith(min: -100_000, max: 0)
+        testRandomWith(min: -100, max: 100)
     }
     
     func testRandomNumberWithNegativeAndReversedParameters()
     {
-        let from = -100
-        let to = 0
-        let result = AlchemyGenerator.integer(from: to, to: from)
-        verify(withMin: from, max: to, result: result)
+        testRandomWith(min: -100, max: 0)
+    }
+    
+    private func testRandomWith(min: Int, max: Int)
+    {
+        let result = AlchemyGenerator.integer(from: min, to: max)
+        verify(withMin: min, max: max, result: result)
     }
     
     private func verify(withMin min: Int, max: Int, result: Int)
