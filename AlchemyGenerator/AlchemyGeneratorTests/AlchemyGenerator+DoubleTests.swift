@@ -41,7 +41,23 @@ class AlchemyGeneratorPlusDoubles_Tests: XCTestCase
         verify(withMin: min, max: max, result: result)
     }
     
+    func testPositiveDouble()
+    {
+        let result = AlchemyGenerator.positiveDouble()
+        XCTAssertTrue(result > 0.0)
+    }
     
+    func testNegativeDouble()
+    {
+        let result = AlchemyGenerator.negativeDouble()
+        XCTAssertTrue(result < 0.0)
+    }
+    
+    func testAnyDouble()
+    {
+        let result = AlchemyGenerator.anyDouble()
+        XCTAssertNotNil(result)
+    }
     
     private func testRandomWith(min: Double, max: Double)
     {
