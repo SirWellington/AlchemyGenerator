@@ -71,3 +71,24 @@ class AlchemyGeneratorPlusDoubles_Tests: XCTestCase
         XCTAssertTrue(result <= max)
     }
 }
+
+class DoubleClassesTests: XCTestCase
+{
+    func testAny()
+    {
+        let any = AlchemyGenerator.Doubles.any
+        XCTAssertNotNil(any)
+    }
+    
+    func testPositive()
+    {
+        let result = AlchemyGenerator.Doubles.positive
+        XCTAssertTrue(result > 0.0)
+    }
+    
+    func testNegative()
+    {
+        let result = AlchemyGenerator.Doubles.negative
+        XCTAssertTrue(result < 0.0)
+    }
+}
