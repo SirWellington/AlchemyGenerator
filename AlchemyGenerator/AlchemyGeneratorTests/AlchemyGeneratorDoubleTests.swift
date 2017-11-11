@@ -10,7 +10,7 @@ import AlchemyGenerator
 import Foundation
 import XCTest
 
-class AlchemyGeneratorPlusDoubles_Tests: XCTestCase
+class AlchemyGeneratorPlusDoublesTests: XCTestCase
 {
     
     func testRandomWithPositive()
