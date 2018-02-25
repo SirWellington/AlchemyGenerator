@@ -149,7 +149,7 @@ fileprivate class Characters
         let digits = Set(0...9)
         
         let characters = digits.map() { Character("\($0)") }
-        return Set(characters.characters)
+        return Set(characters)
     }()
     
     static var alphanumeric: Set<Character>
