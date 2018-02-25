@@ -55,12 +55,14 @@ public extension AlchemyGenerator
 
     public class Dates
     {
-        static var now: Date { return AlchemyGenerator.rightNow() }
 
-        static var past: Date { return AlchemyGenerator.pastDate() }
+        public static var any: Date { return AlchemyGenerator.anyDate() }
 
-        static var future: Date { return AlchemyGenerator.futureDate() }
+        public static var future: Date { return AlchemyGenerator.futureDate() }
 
-        static var any: Date { return AlchemyGenerator.anyDate() }
+        public static var now: Date { return AlchemyGenerator.rightNow() }
+
+        public static var past: Date { return AlchemyGenerator.pastDate() }
     }
+
 }
