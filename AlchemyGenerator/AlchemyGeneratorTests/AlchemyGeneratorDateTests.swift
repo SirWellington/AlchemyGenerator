@@ -57,6 +57,16 @@ class AlchemyGeneratorDateTests: XCTestCase
         }
     }
 
+    func testAny()
+    {
+        (0...iterations).forEach
+        { _ in
+
+            let any = AlchemyGenerator.anyDate()
+            XCTAssertTrue(any != nil)
+        }
+    }
+
     func testDateClass()
     {
         (0...iterations).forEach
@@ -72,6 +82,9 @@ class AlchemyGeneratorDateTests: XCTestCase
 
             let past = AlchemyGenerator.Dates.past
             XCTAssertTrue(past.timeIntervalSince1970 < now.timeIntervalSince1970)
+
+            let any = AlchemyGenerator.Dates.any
+            XCTAssertTrue(any != nil)
         }
     }
 

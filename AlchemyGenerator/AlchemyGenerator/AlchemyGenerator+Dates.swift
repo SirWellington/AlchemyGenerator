@@ -40,6 +40,19 @@ public extension AlchemyGenerator
                 now.addingTimeInterval(Double(hoursAhead) * 60)
     }
 
+    static func anyDate() -> Date
+    {
+       let branch = AlchemyGenerator.integer(from: 0, to: 3)
+
+        switch branch
+        {
+            case 0 : return rightNow()
+            case 1 : return pastDate()
+            case 2: return futureDate()
+            default : return rightNow()
+        }
+    }
+
     public class Dates
     {
         static var now: Date { return AlchemyGenerator.rightNow() }
@@ -47,5 +60,7 @@ public extension AlchemyGenerator
         static var past: Date { return AlchemyGenerator.pastDate() }
 
         static var future: Date { return AlchemyGenerator.futureDate() }
+
+        static var any: Date { return AlchemyGenerator.anyDate() }
     }
 }
