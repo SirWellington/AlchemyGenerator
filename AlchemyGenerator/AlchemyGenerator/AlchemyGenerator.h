@@ -3,7 +3,7 @@
 //  AlchemyGenerator
 //
 //  Created by Wellington Moreno on 9/11/16.
-//  Copyright © 2016 Sir Wellington. All rights reserved.
+//  Copyright © 2018 Sir Wellington. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
