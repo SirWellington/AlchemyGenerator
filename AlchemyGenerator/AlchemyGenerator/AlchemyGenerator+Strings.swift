@@ -141,7 +141,7 @@ fileprivate class Characters
     static let alphabetic: Set<Character> =
     {
        let characters = "abcdefghijklmnopqrstuvwxyz"
-        return Set(characters)
+        return Set(characters.characters)
     }()
     
     static let numeric: Set<Character> =
@@ -149,7 +149,7 @@ fileprivate class Characters
         let digits = Set(0...9)
         
         let characters = digits.map() { Character("\($0)") }
-        return Set(characters)
+        return Set(characters.characters)
     }()
     
     static var alphanumeric: Set<Character>
@@ -161,6 +161,6 @@ fileprivate class Characters
     static let hex: Set<Character> =
     {
         let characters = "0123456789ABCDEF"
-        return Set(characters)
+        return Set(characters.characters)
     }()
 }
