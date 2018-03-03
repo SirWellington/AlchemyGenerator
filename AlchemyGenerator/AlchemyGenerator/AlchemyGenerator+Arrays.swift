@@ -40,6 +40,17 @@ public extension AlchemyGenerator
         {
             return AlchemyGenerator.array(withCreator: AlchemyGenerator.positiveInteger)
         }
+
+        /**
+            Creates an [Array] with `size` elements, where each element is taken from the
+            `producer` parameter.
+
+            @see [AlchemyGenerator.array].
+        */
+        public static func of<T>(size: Int = AlchemyGenerator.defaultSize, _ producer: () -> T) -> [T]
+        {
+            return (0..<size).map { _ in producer() }
+        }
     }
 }
 

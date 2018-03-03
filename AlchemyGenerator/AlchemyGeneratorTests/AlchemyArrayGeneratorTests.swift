@@ -20,6 +20,17 @@ class AlchemyListGeneratorTests: XCTestCase
         iterations = AlchemyGenerator.integer(from: 10, to: 100)
         size = AlchemyGenerator.integer(from: 25, to: 200)
     }
+
+    func testArrayOf()
+    {
+        self.repeat()
+        {
+            let result = AlchemyGenerator.Arrays.of(size: size, AlchemyGenerator.anyInteger)
+
+            XCTAssertTrue(result.count == size)
+        }
+
+    }
     
     func testArray()
     {
