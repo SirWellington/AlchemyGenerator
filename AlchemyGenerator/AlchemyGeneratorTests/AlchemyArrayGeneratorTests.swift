@@ -1,5 +1,5 @@
 //
-//  AlchemyListGeneratorTests.swift
+//  AlchemyArrayGeneratorTests.swift
 //  AlchemyGenerator
 //
 //  Created by Wellington Moreno on 9/11/16.
