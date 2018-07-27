@@ -20,6 +20,8 @@
 		DEBD16881D86360800E5C4DD /* AlchemyArrayGeneratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBD16871D86360800E5C4DD /* AlchemyArrayGeneratorTests.swift */; };
 		DEC448321FB6BE27002D67DB /* AlchemyGenerator+Doubles.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC448311FB6BE27002D67DB /* AlchemyGenerator+Doubles.swift */; };
 		DEC448341FB6C033002D67DB /* AlchemyGeneratorDoubleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC448331FB6C033002D67DB /* AlchemyGeneratorDoubleTests.swift */; };
+		EAAED0C8EE8E5851F1C1F819 /* AlchemyBooleanGeneratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAAEDD9F2F28AF83102A76E4 /* AlchemyBooleanGeneratorTests.swift */; };
+		EAAEDF8F96797CD6365B6C72 /* AlchemyGenerator+Booleans.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAAED515F17CE96E76B34AD3 /* AlchemyGenerator+Booleans.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		DEBD16871D86360800E5C4DD /* AlchemyArrayGeneratorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlchemyArrayGeneratorTests.swift; sourceTree = "<group>"; };
 		DEC448311FB6BE27002D67DB /* AlchemyGenerator+Doubles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AlchemyGenerator+Doubles.swift"; sourceTree = "<group>"; };
 		DEC448331FB6C033002D67DB /* AlchemyGeneratorDoubleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlchemyGeneratorDoubleTests.swift; sourceTree = "<group>"; };
+		EAAED515F17CE96E76B34AD3 /* AlchemyGenerator+Booleans.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AlchemyGenerator+Booleans.swift"; sourceTree = "<group>"; };
+		EAAEDD9F2F28AF83102A76E4 /* AlchemyBooleanGeneratorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlchemyBooleanGeneratorTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,12 +106,13 @@
 		DEBD166D1D8635DB00E5C4DD /* AlchemyGeneratorTests */ = {
 			isa = PBXGroup;
 			children = (
+				DEBD16871D86360800E5C4DD /* AlchemyArrayGeneratorTests.swift */,
+				EAAEDD9F2F28AF83102A76E4 /* AlchemyBooleanGeneratorTests.swift */,
+				853F2AA05609B958CEE3E025 /* AlchemyGeneratorDateTests.swift */,
 				DEC448331FB6C033002D67DB /* AlchemyGeneratorDoubleTests.swift */,
 				DEBD16841D86360000E5C4DD /* AlchemyGeneratorStringTests.swift */,
 				DEBD16831D86360000E5C4DD /* AlchemyIntGeneratorTests.swift */,
-				DEBD16871D86360800E5C4DD /* AlchemyArrayGeneratorTests.swift */,
 				DEBD16701D8635DB00E5C4DD /* Info.plist */,
-				853F2AA05609B958CEE3E025 /* AlchemyGeneratorDateTests.swift */,
 			);
 			path = AlchemyGeneratorTests;
 			sourceTree = "<group>";
@@ -115,11 +120,12 @@
 		DEBD167A1D8635E500E5C4DD /* Generators */ = {
 			isa = PBXGroup;
 			children = (
+				DEBD167D1D8635EF00E5C4DD /* AlchemyGenerator+Arrays.swift */,
+				EAAED515F17CE96E76B34AD3 /* AlchemyGenerator+Booleans.swift */,
+				853F24F60E55A717891AA3AD /* AlchemyGenerator+Dates.swift */,
 				DEC448311FB6BE27002D67DB /* AlchemyGenerator+Doubles.swift */,
 				DEBD167B1D8635EF00E5C4DD /* AlchemyGenerator+Integers.swift */,
-				DEBD167D1D8635EF00E5C4DD /* AlchemyGenerator+Arrays.swift */,
 				DEBD167C1D8635EF00E5C4DD /* AlchemyGenerator+Strings.swift */,
-				853F24F60E55A717891AA3AD /* AlchemyGenerator+Dates.swift */,
 			);
 			name = Generators;
 			sourceTree = "<group>";
@@ -241,6 +247,7 @@
 				DEBD16821D8635F900E5C4DD /* AlchemyGenerator.swift in Sources */,
 				DEC448321FB6BE27002D67DB /* AlchemyGenerator+Doubles.swift in Sources */,
 				853F29BE88930BAC51229738 /* AlchemyGenerator+Dates.swift in Sources */,
+				EAAEDF8F96797CD6365B6C72 /* AlchemyGenerator+Booleans.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,6 +260,7 @@
 				DEBD16861D86360000E5C4DD /* AlchemyGeneratorStringTests.swift in Sources */,
 				DEBD16851D86360000E5C4DD /* AlchemyIntGeneratorTests.swift in Sources */,
 				853F2CCDAA0AAF953FAD7B81 /* AlchemyGeneratorDateTests.swift in Sources */,
+				EAAED0C8EE8E5851F1C1F819 /* AlchemyBooleanGeneratorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
