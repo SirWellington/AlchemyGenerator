@@ -121,6 +121,19 @@ class AlchemyStringGeneratorTests: XCTestCase
             XCTAssertNotNil(uuid)
         }
     }
+
+    func testURL()
+    {
+        self.repeat()
+        {
+            let url = AlchemyGenerator.url()
+            XCTAssertNotNil(url)
+            XCTAssertTrue(url.starts(with: "https"))
+
+            let realUrl = URL(string: url)
+            XCTAssertNotNil(realUrl)
+        }
+    }
     
     func testStringFromList()
     {

@@ -32,6 +32,11 @@ public extension AlchemyGenerator
         {
             return AlchemyGenerator.numericString()
         }
+
+        public static var url: String
+        {
+           return AlchemyGenerator.url()
+        }
     }
     
 }
@@ -112,6 +117,25 @@ public extension AlchemyGenerator
         return list[randomIndex]
     }
 }
+
+
+//======================================
+// MARK: URL
+//======================================
+public extension AlchemyGenerator
+{
+    static func url() -> String
+    {
+        let hostname = Strings.alphabetic
+        let domains = ["com", "net", "tech", "love"]
+        let domain = AlchemyGenerator.stringFromList(domains)
+        let suffix = Strings.alphanumeric
+
+        let url = "https://\(hostname).\(domain)/\(suffix)"
+        return url
+    }
+}
+
 
 //MARK: String Creation Methods
 fileprivate extension AlchemyGenerator
