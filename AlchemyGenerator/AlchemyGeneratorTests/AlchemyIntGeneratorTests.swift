@@ -75,6 +75,13 @@ class AlchemyIntGeneratorTests: XCTestCase
         let result = AlchemyGenerator.anyInteger()
         XCTAssertNotNil(result)
     }
+
+    func testAge()
+    {
+        let result = AlchemyGenerator.age()
+        XCTAssertTrue(result > 0)
+        XCTAssertTrue(result < 200)
+    }
 }
 
 //MARK: Test Integer Class

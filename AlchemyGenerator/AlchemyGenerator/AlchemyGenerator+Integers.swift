@@ -57,4 +57,10 @@ public extension AlchemyGenerator
     {
         return integer(from: -1_000, to: 1_000)
     }
+
+    public static func age() -> Int
+    {
+        return AlchemyGenerator.integer(from: 19, to: 99)
+    }
+
 }
