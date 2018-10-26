@@ -8,7 +8,10 @@
 
 import Foundation
 
-//MARK: Strings Class
+
+//======================================
+// MARK: STRINGS CLASS
+//======================================
 public extension AlchemyGenerator
 {
     public class Strings
@@ -27,6 +30,11 @@ public extension AlchemyGenerator
         {
             return AlchemyGenerator.hexString()
         }
+
+        public static var phone: String
+        {
+            return AlchemyGenerator.phoneNumber()
+        }
         
         public static var numeric: String
         {
@@ -41,7 +49,10 @@ public extension AlchemyGenerator
     
 }
 
-//MARK: String Generation Methods
+
+//======================================
+// MARK: STRING GENERATORS
+//======================================
 public extension AlchemyGenerator
 {
     
@@ -124,6 +135,7 @@ public extension AlchemyGenerator
 //======================================
 public extension AlchemyGenerator
 {
+
     static func url() -> String
     {
         let hostname = Strings.alphabetic
@@ -137,8 +149,27 @@ public extension AlchemyGenerator
 }
 
 
-//MARK: String Creation Methods
-fileprivate extension AlchemyGenerator
+//======================================
+// MARK: PEOPLE
+//======================================
+public extension AlchemyGenerator
+{
+    static func phoneNumber() -> String
+    {
+        let country = integer(from: 1, to: 80)
+        let area = integer(from: 100, to: 999)
+        let first = integer(from: 100, to: 999)
+        let second = integer(from: 1000, to: 9999)
+        return "\(country)-\(area)-\(first)-\(second)"
+    }
+}
+
+
+//======================================
+// MARK: PRIVATE METHODS
+//======================================
+
+private extension AlchemyGenerator
 {
     static func createString(fromCharacterSet set: Set<Character>, ofSize size: Int) -> String
     {
@@ -160,7 +191,7 @@ fileprivate extension AlchemyGenerator
 }
 
 //MARK: Character Sets
-fileprivate class Characters
+private class Characters
 {
     static let alphabetic: Set<Character> =
     {

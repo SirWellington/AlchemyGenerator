@@ -134,6 +134,19 @@ class AlchemyStringGeneratorTests: XCTestCase
             XCTAssertNotNil(realUrl)
         }
     }
+
+    func testPhoneNumber()
+    {
+        self.repeat
+        {
+            let phone = AlchemyGenerator.phoneNumber()
+            XCTAssertNotNil(phone)
+            XCTAssertFalse(phone.isEmpty)
+
+            let matches = self.matches(for: "\\d{1,2}-\\d{3}-\\d{3}-\\d{4}", in: phone)
+            XCTAssertFalse(matches.isEmpty)
+        }
+    }
     
     func testStringFromList()
     {
@@ -168,9 +181,13 @@ class AlchemyStringGeneratorTests: XCTestCase
     }
 }
 
-//MARK: Test Strings class
+
+//======================================
+// MARK: STRINGS CLASS
+//======================================
 extension AlchemyStringGeneratorTests
 {
+
     func testStringsClass()
     {
         for _ in (1...iterations)
@@ -179,7 +196,8 @@ extension AlchemyStringGeneratorTests
             checkNotEmpty(AlchemyGenerator.Strings.alphanumeric)
             checkNotEmpty(AlchemyGenerator.Strings.hex)
             checkNotEmpty(AlchemyGenerator.Strings.numeric)
-
+            checkNotEmpty(AlchemyGenerator.Strings.url)
+            checkNotEmpty(AlchemyGenerator.Strings.phone)
         }
     
     }
@@ -187,5 +205,35 @@ extension AlchemyStringGeneratorTests
     func checkNotEmpty(_ string: String)
     {
         XCTAssertTrue(!string.isEmpty)
+    }
+
+}
+
+
+
+//======================================
+// MARK: PRIVATE FUNCTIONS
+//======================================
+private extension AlchemyStringGeneratorTests
+{
+
+    func matches(for regex: String, in text: String) -> [String]
+    {
+
+        do
+        {
+            let regex = try NSRegularExpression(pattern: regex)
+            let results = regex.matches(in: text,
+                                        range: NSRange(text.startIndex..., in: text))
+            return results.map
+            {
+                String(text[Range($0.range, in: text)!])
+            }
+        }
+        catch let error
+        {
+            print("invalid regex: \(error.localizedDescription)")
+            return []
+        }
     }
 }
