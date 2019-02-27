@@ -4,15 +4,11 @@ xcode_project: AlchemyGenerator/AlchemyGenerator.xcodeproj # path to your xcodep
 xcode_scheme: AlchemyGenerator
 xcode_destination: platform=iOS Simulator,OS=11.4,name=iPhone 7
 before_install:
-  - brew update ; brew install carthage
+  - brew update ; brew upgrade carthage
 
   # Only if app has Carthage dependencies
   # - carthage bootstrap --verbose
 
 script:
   - carthage build --no-skip-current
-  - xcodebuild test \
-    -project AlchemyGenerator/AlchemyGenerator.xcodeproj \
-    -scheme AlchemyGenerator \
-    -sdk iphonesimulator \
-    -destination 'platform=iOS Simulator,OS=11.4,name=iPhone 7'
+  - xcodebuild test -project AlchemyGenerator/AlchemyGenerator.xcodeproj -scheme AlchemyGenerator -sdk iphonesimulator -destination 'platform=iOS Simulator,OS=11.4,name=iPhone 7' | xcpretty --test --color
