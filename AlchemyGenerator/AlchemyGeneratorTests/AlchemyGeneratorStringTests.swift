@@ -135,6 +135,32 @@ class AlchemyStringGeneratorTests: XCTestCase
         }
     }
 
+    func testName()
+    {
+        self.repeat
+        {
+            let name = AlchemyGenerator.name()
+            XCTAssertNotNil(name)
+            XCTAssertFalse(name.isEmpty)
+            XCTAssertFalse(name == " ")
+            XCTAssertFalse(name == "\n")
+            XCTAssertFalse(name == "\t")
+        }
+    }
+
+    func testEmail()
+    {
+        self.repeat
+        {
+            let email = AlchemyGenerator.email()
+            XCTAssertNotNil(email)
+            XCTAssertFalse(email.isEmpty)
+            XCTAssertTrue(email.count >= 5)
+            XCTAssertTrue(email.contains("@"))
+            XCTAssertTrue(email.contains("."))
+        }
+    }
+
     func testPhoneNumber()
     {
         self.repeat

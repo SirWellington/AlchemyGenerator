@@ -25,6 +25,11 @@ public extension AlchemyGenerator
         {
             return AlchemyGenerator.alphanumericString()
         }
+
+        public static var email: String
+        {
+            return AlchemyGenerator.email()
+        }
         
         public static var hex: String
         {
@@ -34,6 +39,11 @@ public extension AlchemyGenerator
         public static var phone: String
         {
             return AlchemyGenerator.phoneNumber()
+        }
+
+        public static var name: String
+        {
+            return AlchemyGenerator.name()
         }
         
         public static var numeric: String
@@ -90,6 +100,7 @@ public extension AlchemyGenerator
         
         return result
     }
+
 }
 
 //MARK: Hex Strings
@@ -136,11 +147,16 @@ public extension AlchemyGenerator
 public extension AlchemyGenerator
 {
 
+    static func domain() -> String
+    {
+        let domains = ["com", "net", "tech", "love", "co", "do"]
+        return stringFromList(domains)
+    }
+
     static func url() -> String
     {
         let hostname = Strings.alphabetic
-        let domains = ["com", "net", "tech", "love"]
-        let domain = AlchemyGenerator.stringFromList(domains)
+        let domain = AlchemyGenerator.domain()
         let suffix = Strings.alphanumeric
 
         let url = "https://\(hostname).\(domain)/\(suffix)"
@@ -154,6 +170,12 @@ public extension AlchemyGenerator
 //======================================
 public extension AlchemyGenerator
 {
+
+    static func name() -> String
+    {
+        return stringFromList(Resources.names)
+    }
+
     static func phoneNumber() -> String
     {
         let country = integer(from: 1, to: 80)
@@ -162,6 +184,17 @@ public extension AlchemyGenerator
         let second = integer(from: 1000, to: 9999)
         return "\(country)-\(area)-\(first)-\(second)"
     }
+
+    static func email() -> String
+    {
+        let username1 = name().lowercased()
+        let username2 = numericString(ofSize: Int.random(in: 2...4))
+        let emailDomains = ["gmail.com", "alchemy.tech", "yahoo.com", "googlemail.com", "hotmail.com", "icloud.com"]
+        let domain = stringFromList(emailDomains)
+
+        return "\(username1).\(username2)@\(domain)"
+    }
+
 }
 
 
