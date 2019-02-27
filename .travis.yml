@@ -4,7 +4,7 @@ xcode_project: AlchemyGenerator.xcodeproj # path to your xcodeproj folder
 xcode_scheme: AlchemyGenerator
 xcode_destination: platform=iOS Simulator,OS=11.4,name=iPhone 7
 before_install:
-  - brew update ; brew upgrade carthage
+  - brew upgrade carthage
 
   # Only if app has Carthage dependencies
   # - carthage bootstrap --verbose
