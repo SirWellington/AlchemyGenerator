@@ -66,13 +66,12 @@ public extension AlchemyGenerator
 public extension AlchemyGenerator
 {
     
-    fileprivate static var defaultSize: Int
+    static var defaultStringSize: Int
     {
-        return AlchemyGenerator.integer(from: 5, to: 20)
+        return Int.random(in: 5...20)
     }
     
-    
-    static func numericString(ofSize size: Int = defaultSize) -> String
+    static func numericString(ofSize size: Int = defaultStringSize) -> String
     {
         guard size > 0 else { return "" }
         
@@ -82,7 +81,7 @@ public extension AlchemyGenerator
         return result
     }
     
-    static func alphabeticString(ofSize size: Int = defaultSize) -> String
+    static func alphabeticString(ofSize size: Int = defaultStringSize) -> String
     {
         guard size > 0 else { return "" }
         
@@ -91,7 +90,7 @@ public extension AlchemyGenerator
         return result
     }
     
-    static func alphanumericString(ofSize size: Int = defaultSize) -> String
+    static func alphanumericString(ofSize size: Int = defaultStringSize) -> String
     {
         guard size > 0 else { return "" }
         
@@ -107,7 +106,7 @@ public extension AlchemyGenerator
 public extension AlchemyGenerator
 {
     
-    static func hexString(ofSize size: Int = defaultSize) -> String
+    static func hexString(ofSize size: Int = defaultStringSize) -> String
     {
         guard size > 0 else { return "" }
         

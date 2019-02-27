@@ -27,7 +27,7 @@ class AlchemyGeneratorDateTests: XCTestCase
             let result = AlchemyGenerator.rightNow()
 
             XCTAssertTrue(result != nil)
-            XCTAssertEqualWithAccuracy(result.timeIntervalSince1970, now.timeIntervalSince1970, accuracy: 1.0)
+            XCTAssertEqual(result.timeIntervalSince1970, now.timeIntervalSince1970, accuracy: 1.0)
         }
     }
 
@@ -73,9 +73,9 @@ class AlchemyGeneratorDateTests: XCTestCase
         { _ in
 
             let now = Date()
-            var rightNow = AlchemyGenerator.Dates.now
+            let rightNow = AlchemyGenerator.Dates.now
 
-            XCTAssertEqualWithAccuracy(now.timeIntervalSince1970, rightNow.timeIntervalSince1970, accuracy: 1.0)
+            XCTAssertEqual(now.timeIntervalSince1970, rightNow.timeIntervalSince1970, accuracy: 1.0)
 
             let future = AlchemyGenerator.Dates.future
             XCTAssertTrue(future.timeIntervalSince1970 > now.timeIntervalSince1970)

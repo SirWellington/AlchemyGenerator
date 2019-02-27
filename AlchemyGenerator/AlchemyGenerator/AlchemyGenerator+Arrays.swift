@@ -58,7 +58,7 @@ public extension AlchemyGenerator
 //MARK: List Generation Methods
 public extension AlchemyGenerator
 {
-    fileprivate static var defaultSize: Int
+    static var defaultSize: Int
     {
         return integer(from: 5, to: 50)
     }
