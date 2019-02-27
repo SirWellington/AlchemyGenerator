@@ -1,6 +1,6 @@
 osx_image: xcode10.1
 language: objective-c
-xcode_project: AlchemyGenerator/AlchemyGenerator.xcodeproj # path to your xcodeproj folder
+xcode_project: AlchemyGenerator.xcodeproj # path to your xcodeproj folder
 xcode_scheme: AlchemyGenerator
 xcode_destination: platform=iOS Simulator,OS=11.4,name=iPhone 7
 before_install:
@@ -11,4 +11,4 @@ before_install:
 
 script:
   - carthage build --no-skip-current
-  - xcodebuild test -project AlchemyGenerator/AlchemyGenerator.xcodeproj -scheme AlchemyGenerator -sdk iphonesimulator -destination 'platform=iOS Simulator,OS=11.4,name=iPhone 7' | xcpretty --test --color
+  - xcodebuild test -project AlchemyGenerator.xcodeproj -scheme AlchemyGenerator -sdk iphonesimulator -destination 'platform=iOS Simulator,OS=11.4,name=iPhone 7' | xcpretty --test --color
