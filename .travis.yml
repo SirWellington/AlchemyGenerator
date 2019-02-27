@@ -11,9 +11,4 @@ before_install:
 
 script:
   - carthage build --no-skip-current
-  - xcodebuild \
-    -project AlchemyGenerator/AlchemyGenerator.xcodeproj \
-    -scheme AlchemyGenerator \
-    -sdk iphonesimulator \
-    -destination 'platform=iOS Simulator,OS=11.4,name=iPhone 7' \ 
-    test | xcpretty --test --color
+  - xcodebuild test -project AlchemyGenerator/AlchemyGenerator.xcodeproj -scheme AlchemyGenerator -sdk iphonesimulator -destination 'platform=iOS Simulator,OS=11.4,name=iPhone 7' | xcpretty --test --color
