@@ -14,6 +14,7 @@ import Foundation
 //======================================
 public extension AlchemyGenerator
 {
+
     public class Strings
     {
         public static var alphabetic: String
