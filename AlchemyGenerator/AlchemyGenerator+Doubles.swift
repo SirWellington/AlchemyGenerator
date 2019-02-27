@@ -3,7 +3,7 @@
 //  AlchemyGenerator
 //
 //  Created by Wellington Moreno on 11/10/17.
-//  Copyright © 2017 SirWellington. All rights reserved.
+//  Copyright © 2019 SirWellington. All rights reserved.
 //
 
 import Foundation
