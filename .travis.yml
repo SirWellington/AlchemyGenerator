@@ -16,4 +16,4 @@ script:
     -scheme AlchemyGenerator \
     -sdk iphonesimulator \
     -destination 'platform=iOS Simulator,OS=11.4,name=iPhone 7' \ 
-    test
+    test | xcpretty --test --color
