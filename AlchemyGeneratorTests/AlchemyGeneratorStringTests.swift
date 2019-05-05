@@ -20,9 +20,8 @@ class AlchemyStringGeneratorTests: XCTestCase
         let lowerCased = "a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z".components(separatedBy: ",")
         
         let upperCased = lowerCased.map() { $0.uppercased() }
-        
         let combined = lowerCased + upperCased
-        return combined.map() { $0.characters.first! }
+        return combined.compactMap() { $0.first }
     }()
     
     private let numericCharacters: [Character] =
@@ -43,7 +42,7 @@ class AlchemyStringGeneratorTests: XCTestCase
     private let hexCharacters: [Character] =
     {
        let characters = "0123456789ABCDEF"
-        return Array(characters.characters)
+        return Array(characters)
     }()
     
     override func setUp()
@@ -55,7 +54,7 @@ class AlchemyStringGeneratorTests: XCTestCase
     func testNumericString()
     {
         let string = AlchemyGenerator.numericString(ofSize: size)
-        XCTAssertEqual(string.characters.count, size)
+        XCTAssertEqual(string.count, size)
     }
     
     func testAlphabeticalString()
@@ -63,7 +62,7 @@ class AlchemyStringGeneratorTests: XCTestCase
         for _ in (1...iterations)
         {
             let result = AlchemyGenerator.alphabeticString(ofSize: size)
-            XCTAssertEqual(result.characters.count, size)
+            XCTAssertEqual(result.count, size)
             
             ensure(string: result, areCharactersIn: alphabeticalCharacters)
         }
@@ -84,7 +83,7 @@ class AlchemyStringGeneratorTests: XCTestCase
         for _ in (1...iterations)
         {
             let result = AlchemyGenerator.alphanumericString(ofSize: size)
-            XCTAssertEqual(result.characters.count, size)
+            XCTAssertEqual(result.count, size)
             
             ensure(string: result, areCharactersIn: alphanumericCharacters)
         }
@@ -106,7 +105,7 @@ class AlchemyStringGeneratorTests: XCTestCase
         for _ in (1...iterations)
         {
             let result = AlchemyGenerator.hexString(ofSize: size)
-            XCTAssertEqual(result.characters.count, size)
+            XCTAssertEqual(result.count, size)
             
             ensure(string: result, areCharactersIn: hexCharacters)
         }
@@ -192,7 +191,7 @@ class AlchemyStringGeneratorTests: XCTestCase
     
     private func ensure(string: String, areCharactersIn set: [Character])
     {
-        for character in string.characters
+        for character in string
         {
             XCTAssert(set.contains(character), "Character \(character) is not in the expected set: \(set)")
         }

@@ -229,7 +229,7 @@ private class Characters
     static let alphabetic: Set<Character> =
     {
        let characters = "abcdefghijklmnopqrstuvwxyz"
-        return Set(characters.characters)
+        return Set(characters)
     }()
     
     static let numeric: Set<Character> =
@@ -249,6 +249,6 @@ private class Characters
     static let hex: Set<Character> =
     {
         let characters = "0123456789ABCDEF"
-        return Set(characters.characters)
+        return Set(characters)
     }()
 }
