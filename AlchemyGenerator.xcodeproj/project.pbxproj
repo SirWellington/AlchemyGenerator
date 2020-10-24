@@ -83,7 +83,6 @@
 			children = (
 				13D185652544B210006F3181 /* Info.plist */,
 				13D1855B2544B210006F3181 /* AlchemyGenerator */,
-				13D1855F2544B210006F3181 /* Resources */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -99,16 +98,9 @@
 				13D1855D2544B210006F3181 /* AlchemyGenerator+Doubles.swift */,
 				13D1855C2544B210006F3181 /* AlchemyGenerator+Integers.swift */,
 				13D185662544B210006F3181 /* AlchemyGenerator+Strings.swift */,
-			);
-			path = AlchemyGenerator;
-			sourceTree = "<group>";
-		};
-		13D1855F2544B210006F3181 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
 				13D185602544B210006F3181 /* Resources.swift */,
 			);
-			path = Resources;
+			path = AlchemyGenerator;
 			sourceTree = "<group>";
 		};
 		13D185752544B21A006F3181 /* Tests */ = {

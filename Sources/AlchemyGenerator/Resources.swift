@@ -15,7 +15,6 @@ import Foundation
 internal struct Resources
 {
 
-
     static let names = """
           Aaren
           Aarika
