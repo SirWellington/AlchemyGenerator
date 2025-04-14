@@ -5,6 +5,9 @@ import PackageDescription
 
 let package = Package(
     name: "AlchemyGenerator",
+    platforms: [
+        .macOS(.v12), .iOS(.v15)
+    ],
     products: [
         .library(
             name: "AlchemyGenerator",
@@ -13,7 +16,7 @@ let package = Package(
     dependencies: [
         .package(
             url: "https://github.com/SirWellington/alchemytest",
-            from:(.branch("develop"))
+            .branch("develop")
         )
     ],
     targets: [
