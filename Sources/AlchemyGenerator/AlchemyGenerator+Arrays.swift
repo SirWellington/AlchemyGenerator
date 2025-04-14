@@ -65,8 +65,8 @@ public extension AlchemyGenerator {
 
     static var defaultSize: Int {
         integer(
-            fromInclusive: 5,
-            toInclusive: 50
+            fromInclusive: 3,
+            toExclusive: 50
         )
     }
     
@@ -105,7 +105,7 @@ public extension AlchemyGenerator {
         
         let index = integer(
             fromInclusive: 0,
-            toInclusive: array.count
+            toExclusive: array.count
         )
         
         return array[index]

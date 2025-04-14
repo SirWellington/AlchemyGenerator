@@ -8,9 +8,10 @@
 
 import Foundation
 @testable import AlchemyGenerator
+import AlchemyTest
 import XCTest
 
-class AlchemyIntGeneratorTests: XCTestCase {
+final class AlchemyIntGeneratorTests: AlchemyTest {
 
     override func setUp() {
         // Empty setup — included for future use
@@ -35,15 +36,17 @@ class AlchemyIntGeneratorTests: XCTestCase {
         let from = 0
         let to = 1000
 
-        let result = AlchemyGenerator.integer(
-            fromInclusive: to,
-            toInclusive: from
-        )
-        verify(
-            withMin: from,
-            max: to,
-            result: result
-        )
+        repeatTest {
+            let result = AlchemyGenerator.integer(
+                fromInclusive: to,
+                toInclusive: from
+            )
+            verify(
+                min: from,
+                max: to,
+                result: result
+            )
+        }
     }
 
     func testRandomNumberWithNegative() {
@@ -72,19 +75,21 @@ class AlchemyIntGeneratorTests: XCTestCase {
         min: Int,
         max: Int
     ) {
-        let result = AlchemyGenerator.integer(
-            fromInclusive: min,
-            toInclusive: max
-        )
-        verify(
-            withMin: min,
-            max: max,
-            result: result
-        )
+        repeatTest {
+            let result = AlchemyGenerator.integer(
+                fromInclusive: min,
+                toInclusive: max
+            )
+            verify(
+                min: min,
+                max: max,
+                result: result
+            )
+        }
     }
 
     private func verify(
-        withMin min: Int,
+        min: Int,
         max: Int,
         result: Int
     ) {
@@ -93,24 +98,32 @@ class AlchemyIntGeneratorTests: XCTestCase {
     }
 
     func testPositiveIntegers() {
-        let result = AlchemyGenerator.positiveInteger()
-        XCTAssertTrue(result > 0)
+        repeatTest {
+            let result = AlchemyGenerator.positiveInteger()
+            XCTAssertTrue(result > 0)
+        }
     }
 
     func testNegativeIntegers() {
-        let result = AlchemyGenerator.negativeInteger()
-        XCTAssertTrue(result < 0)
+        repeatTest {
+            let result = AlchemyGenerator.negativeInteger()
+            XCTAssertTrue(result < 0)
+        }
     }
 
     func testAnyInteger() {
-        let result = AlchemyGenerator.anyInteger()
-        XCTAssertNotNil(result)
+        repeatTest {
+            let result = AlchemyGenerator.anyInteger()
+            XCTAssertNotNil(result)
+        }
     }
 
     func testAge() {
-        let result = AlchemyGenerator.age()
-        XCTAssertTrue(result > 0)
-        XCTAssertTrue(result < 200)
+        repeatTest {
+            let result = AlchemyGenerator.age()
+            XCTAssertTrue(result > 0)
+            XCTAssertTrue(result < 200)
+        }
     }
 }
 
@@ -118,13 +131,15 @@ class AlchemyIntGeneratorTests: XCTestCase {
 extension AlchemyIntGeneratorTests {
 
     func testIntegersClass() {
-        let negative = AlchemyGenerator.Integers.negative
-        XCTAssertTrue(negative < 0)
-
-        let positive = AlchemyGenerator.Integers.positive
-        XCTAssertTrue(positive > 0)
-
-        let any = AlchemyGenerator.Integers.any
-        XCTAssertNotNil(any)
+        repeatTest {
+            let negative = AlchemyGenerator.Integers.negative
+            XCTAssertTrue(negative < 0)
+            
+            let positive = AlchemyGenerator.Integers.positive
+            XCTAssertTrue(positive > 0)
+            
+            let any = AlchemyGenerator.Integers.any
+            XCTAssertNotNil(any)
+        }
     }
 }

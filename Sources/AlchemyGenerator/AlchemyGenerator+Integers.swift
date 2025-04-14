@@ -13,18 +13,23 @@ import Foundation
 //======================================
 public extension AlchemyGenerator {
     class Integers {
-        public static var any: Int { AlchemyGenerator.anyInteger() }
-        public static var positive: Int { AlchemyGenerator.positiveInteger() }
-        public static var negative: Int { AlchemyGenerator.negativeInteger() }
+        public static var any: Int {
+            AlchemyGenerator.anyInteger()
+        }
+        public static var positive: Int {
+            AlchemyGenerator.positiveInteger()
+        }
+        public static var negative: Int {
+            AlchemyGenerator.negativeInteger()
+        }
     }
     
-    /**
-        Returns a random integer from `from`(inclusively) to `to`(inclusively)
-     
-        - parameter from: Must be `< to` (inclusive)
-        - parameter to: Must be `> from` (inclusive)
-     
-    */
+    ///
+    /// Returns a random integer from `from`(inclusively) to `to`(inclusively)
+    ///
+    /// - parameter from: Must be `< to` (inclusive)
+    /// - parameter to: Must be `> from` (inclusive)
+    ///
     static func integer(
         fromInclusive from: Int,
         toInclusive to: Int
@@ -37,7 +42,23 @@ public extension AlchemyGenerator {
         let randomNumber = arc4random_uniform(UInt32(difference))
         let result = Int(randomNumber) + from
         
-        return max(result, to)
+        return min(result, to)
+    }
+    
+    ///
+    /// Returns a random integer from `from`(inclusively) to `to`(exclusively)
+    ///
+    /// - parameter from: Must be `< to` (inclusive)
+    /// - parameter to: Must be `> from` (exclusive)
+    ///
+    static func integer(
+        fromInclusive from: Int,
+        toExclusive to: Int
+    ) -> Int {
+        integer(
+            fromInclusive: from,
+            toInclusive: to-1
+        )
     }
     
     static func positiveInteger() -> Int {
@@ -50,7 +71,7 @@ public extension AlchemyGenerator {
     static func negativeInteger() -> Int {
         return integer(
             fromInclusive: -100_000,
-            toInclusive: -1
+            toExclusive: 0
         )
     }
     

@@ -7,13 +7,13 @@
 //
 
 import AlchemyGenerator
+import AlchemyTest
 import Foundation
 import XCTest
 
-class AlchemyStringGeneratorTests: XCTestCase {
+final class AlchemyStringGeneratorTests: AlchemyTest {
 
     fileprivate var size: Int = 0
-    fileprivate var iterations = 10
 
     private let alphabeticalCharacters: [Character] = {
         let lowerCased = "a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z".components(separatedBy: ",")
@@ -38,17 +38,11 @@ class AlchemyStringGeneratorTests: XCTestCase {
         return alphabeticalCharacters + numericCharacters
     }
 
-    private let hexCharacters: [Character] = {
-        let characters = "0123456789ABCDEF"
-        return Array(characters)
-    }()
+    private let hexCharacters: [Character] = Array("0123456789ABCDEF")
 
     override func setUp() {
+        super.setUp()
         size = AlchemyGenerator.integer(
-            fromInclusive: 10,
-            toInclusive: 100
-        )
-        iterations = AlchemyGenerator.integer(
             fromInclusive: 10,
             toInclusive: 100
         )
@@ -62,7 +56,7 @@ class AlchemyStringGeneratorTests: XCTestCase {
     }
 
     func testAlphabeticalString() {
-        for _ in 1...iterations {
+        repeatTest {
             let result = AlchemyGenerator.alphabeticString(
                 size: size
             )
@@ -75,7 +69,7 @@ class AlchemyStringGeneratorTests: XCTestCase {
     }
 
     func testAlphabeticalStringWithBadSize() {
-        for _ in 1...iterations {
+        repeatTest {
             let badSize = AlchemyGenerator.integer(
                 fromInclusive: -10,
                 toInclusive: 0
@@ -88,7 +82,7 @@ class AlchemyStringGeneratorTests: XCTestCase {
     }
 
     func testAlphanumericString() {
-        for _ in 1...iterations {
+        repeatTest {
             let result = AlchemyGenerator.alphanumericString(
                 size: size
             )
@@ -101,7 +95,7 @@ class AlchemyStringGeneratorTests: XCTestCase {
     }
 
     func testAlphanumericStringWithBadSize() {
-        for _ in 1...iterations {
+        repeatTest {
             let badSize = AlchemyGenerator.integer(
                 fromInclusive: -10,
                 toInclusive: 0
@@ -114,7 +108,7 @@ class AlchemyStringGeneratorTests: XCTestCase {
     }
 
     func testHexStrings() {
-        for _ in 1...iterations {
+        repeatTest {
             let result = AlchemyGenerator.hexString(
                 size: size
             )
@@ -209,7 +203,7 @@ class AlchemyStringGeneratorTests: XCTestCase {
     private func `repeat`(
         _ operation: () -> ()
     ) {
-        for _ in 1...iterations {
+        repeatTest {
             operation()
         }
     }
@@ -221,7 +215,7 @@ class AlchemyStringGeneratorTests: XCTestCase {
 extension AlchemyStringGeneratorTests {
 
     func testStringsClass() {
-        for _ in 1...iterations {
+        repeatTest {
             checkNotEmpty(AlchemyGenerator.Strings.alphabetic)
             checkNotEmpty(AlchemyGenerator.Strings.alphanumeric)
             checkNotEmpty(AlchemyGenerator.Strings.hex)

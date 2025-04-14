@@ -7,10 +7,11 @@
 //
 
 import AlchemyGenerator
+import AlchemyTest
 import Foundation
 import XCTest
 
-class AlchemyGeneratorPlusDoublesTests: XCTestCase {
+final class AlchemyGeneratorPlusDoublesTests: AlchemyTest {
 
     func testRandomWithPositive() {
         testRandomWith(
@@ -68,18 +69,24 @@ class AlchemyGeneratorPlusDoublesTests: XCTestCase {
     }
 
     func testPositiveDouble() {
-        let result = AlchemyGenerator.positiveDouble()
-        XCTAssertTrue(result > 0.0)
+        repeatTest {
+            let result = AlchemyGenerator.positiveDouble()
+            XCTAssertTrue(result > 0.0)
+        }
     }
 
     func testNegativeDouble() {
-        let result = AlchemyGenerator.negativeDouble()
-        XCTAssertTrue(result < 0.0)
+        repeatTest {
+            let result = AlchemyGenerator.negativeDouble()
+            XCTAssertTrue(result < 0.0)
+        }
     }
 
     func testAnyDouble() {
-        let result = AlchemyGenerator.anyDouble()
-        XCTAssertNotNil(result)
+        repeatTest {
+            let result = AlchemyGenerator.anyDouble()
+            XCTAssertNotNil(result)
+        }
     }
 
     private func testRandomWith(
@@ -107,20 +114,26 @@ class AlchemyGeneratorPlusDoublesTests: XCTestCase {
     }
 }
 
-class DoubleClassesTests: XCTestCase {
+finalclass DoubleClassesTests: AlchemyTest {
 
     func testAny() {
-        let any = AlchemyGenerator.Doubles.any
-        XCTAssertNotNil(any)
+        repeatTest {
+            let any = AlchemyGenerator.Doubles.any
+            XCTAssertNotNil(any)
+        }
     }
 
     func testPositive() {
-        let result = AlchemyGenerator.Doubles.positive
-        XCTAssertTrue(result > 0.0)
+        repeatTest {
+            let result = AlchemyGenerator.Doubles.positive
+            XCTAssertTrue(result > 0.0)
+        }
     }
 
     func testNegative() {
-        let result = AlchemyGenerator.Doubles.negative
-        XCTAssertTrue(result < 0.0)
+        repeatTest {
+            let result = AlchemyGenerator.Doubles.negative
+            XCTAssertTrue(result < 0.0)
+        }
     }
 }

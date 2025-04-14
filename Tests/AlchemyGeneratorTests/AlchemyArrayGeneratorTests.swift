@@ -7,18 +7,15 @@
 //
 
 import AlchemyGenerator
+import AlchemyTest
 import Foundation
 import XCTest
 
-class AlchemyListGeneratorTests: XCTestCase {
-    var iterations = 0
+final class AlchemyListGeneratorTests: AlchemyTest {
     var size = 0
 
     override func setUp() {
-        iterations = AlchemyGenerator.integer(
-            fromInclusive: 10,
-            toInclusive: 100
-        )
+        super.setUp()
         size = AlchemyGenerator.integer(
             fromInclusive: 25,
             toInclusive: 200
@@ -26,7 +23,7 @@ class AlchemyListGeneratorTests: XCTestCase {
     }
 
     func testArrayOf() {
-        self.repeat() {
+        repeatTest {
             let result = AlchemyGenerator.Arrays.of(
                 size: size,
                 AlchemyGenerator.anyInteger
@@ -36,7 +33,7 @@ class AlchemyListGeneratorTests: XCTestCase {
     }
 
     func testArray() {
-        self.repeat() {
+        repeatTest {
             let result = AlchemyGenerator.array(
                 size: size
             ) {
@@ -49,21 +46,13 @@ class AlchemyListGeneratorTests: XCTestCase {
     }
 
     func testAnyElement() {
-        self.repeat() {
+        repeatTest {
             let array = AlchemyGenerator.Arrays.ofAlphanumericString
             let element = AlchemyGenerator.anyOf(
                 array
             )
             XCTAssertFalse(element == nil)
             XCTAssertTrue(array.contains(element!))
-        }
-    }
-
-    fileprivate func `repeat`(
-        _ operation: () -> ()
-    ) {
-        for _ in 1...iterations {
-            operation()
         }
     }
 }

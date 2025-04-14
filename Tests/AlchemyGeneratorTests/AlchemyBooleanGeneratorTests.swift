@@ -7,26 +7,27 @@
 //
 
 @testable import AlchemyGenerator
+import AlchemyTest
 import Foundation
 import XCTest
 
 //======================================
 // MARK: ALCHEMY BOOLEAN TESTS
 //======================================
-class AlchemyBooleanGeneratorTests: XCTestCase {
-
-    var iterations = 100
-
+final class AlchemyBooleanGeneratorTests: AlchemyTest {
+    
     func testAnyBoolean() {
-        let set = NSMutableSet()
-
-        for _ in 1...iterations {
-            let boolean = AlchemyGenerator.boolean()
-            XCTAssertNotNil(boolean)
-
-            set.add(boolean)
+        repeatTest {
+            let set = NSMutableSet()
+            
+            for _ in 1...iterations {
+                let boolean = AlchemyGenerator.boolean()
+                XCTAssertNotNil(boolean)
+                
+                set.add(boolean)
+            }
+            
+            XCTAssertEqual(set.count, 2)
         }
-
-        XCTAssertEqual(set.count, 2)
     }
 }

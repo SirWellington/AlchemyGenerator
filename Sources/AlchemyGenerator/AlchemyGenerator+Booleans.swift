@@ -15,7 +15,7 @@ import Foundation
 public extension AlchemyGenerator {
     class Booleans {
         public static var any: Bool {
-            return Integers.positive % 2 == 0
+            Integers.positive % 2 == 0
         }
     }
 

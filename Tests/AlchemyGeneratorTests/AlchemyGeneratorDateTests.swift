@@ -7,22 +7,21 @@
 //
 
 @testable import AlchemyGenerator
+import AlchemyTest
 import Foundation
 import XCTest
 
 //======================================
 // MARK: Date Tests
 //======================================
-class AlchemyGeneratorDateTests: XCTestCase {
-
-    private let iterations = 100
+final class AlchemyGeneratorDateTests: AlchemyTest {
 
     func testRightNow() {
-        (0...iterations).forEach { _ in
+        repeatTest {
             let now = Date()
             let result = AlchemyGenerator.rightNow()
 
-            XCTAssertTrue(result != nil)
+            XCTAssertNotNil(result)
             XCTAssertEqual(
                 result.timeIntervalSince1970,
                 now.timeIntervalSince1970,
@@ -32,11 +31,11 @@ class AlchemyGeneratorDateTests: XCTestCase {
     }
 
     func testFuture() {
-        (0...iterations).forEach { _ in
+        repeatTest {
             let now = Date()
             let result = AlchemyGenerator.futureDate()
 
-            XCTAssertTrue(result != nil)
+            XCTAssertNotNil(result)
             XCTAssertTrue(
                 result.timeIntervalSince1970 > now.timeIntervalSince1970
             )
@@ -44,11 +43,11 @@ class AlchemyGeneratorDateTests: XCTestCase {
     }
 
     func testPast() {
-        (0...iterations).forEach { _ in
+        repeatTest {
             let now = Date()
             let result = AlchemyGenerator.pastDate()
 
-            XCTAssertTrue(result != nil)
+            XCTAssertNotNil(result)
             XCTAssertTrue(
                 result.timeIntervalSince1970 < now.timeIntervalSince1970
             )
@@ -56,14 +55,14 @@ class AlchemyGeneratorDateTests: XCTestCase {
     }
 
     func testAny() {
-        (0...iterations).forEach { _ in
-            let any = AlchemyGenerator.anyDate()
-            XCTAssertTrue(any != nil)
+        repeatTest {
+            let result = AlchemyGenerator.anyDate()
+            XCTAssertNotNil(result)
         }
     }
 
     func testDateClass() {
-        (0...iterations).forEach { _ in
+        repeatTest {
             let now = Date()
             let rightNow = AlchemyGenerator.Dates.now
 
@@ -84,7 +83,7 @@ class AlchemyGeneratorDateTests: XCTestCase {
             )
 
             let any = AlchemyGenerator.Dates.any
-            XCTAssertTrue(any != nil)
+            XCTAssertNotNil(any)
         }
     }
 }
