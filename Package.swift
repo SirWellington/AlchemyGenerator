@@ -26,7 +26,7 @@ let package = Package(
         ),
         .testTarget(
             name: "AlchemyGeneratorTests",
-            dependencies: ["AlchemyGenerator"]
+            dependencies: ["AlchemyGenerator", "AlchemyTest"]
         ),
     ]
 )
