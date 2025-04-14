@@ -2,8 +2,8 @@
 //  Resources.swift
 //  AlchemyGenerator
 //
-//  Created by Wellington Moreno on 02/26/2019.
-//  Copyright © 2019 SirWellington. All rights reserved.
+//  Created by Wellington Moreno on 02/26/2025.
+//  Copyright © 2025 SirWellington. All rights reserved.
 //
 
 import Foundation
