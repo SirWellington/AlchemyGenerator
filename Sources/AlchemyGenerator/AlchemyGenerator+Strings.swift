@@ -105,7 +105,10 @@ public extension AlchemyGenerator {
     static func stringFromList(_ list: [String]) -> String {
         guard !list.isEmpty else { return "" }
         
-        let randomIndex = integer(from: 0, to: list.count - 1)
+        let randomIndex = integer(
+            fromInclusive: 0,
+            toInclusive: list.count - 1
+        )
         return list[randomIndex]
     }
 }
@@ -151,17 +154,32 @@ public extension AlchemyGenerator {
     }
 
     static func phoneNumber() -> String {
-        let country = integer(from: 1, to: 80)
-        let area = integer(from: 100, to: 999)
-        let first = integer(from: 100, to: 999)
-        let second = integer(from: 1000, to: 9999)
+        let country = integer(
+            fromInclusive: 1,
+            toInclusive: 80
+        )
+        let area = integer(
+            fromInclusive: 100,
+            toInclusive: 999
+        )
+        let first = integer(
+            fromInclusive: 100,
+            toInclusive: 999
+        )
+        let second = integer(
+            fromInclusive: 1000,
+            toInclusive: 9999
+        )
         return "\(country)-\(area)-\(first)-\(second)"
     }
 
     static func email() -> String {
         let username1 = name().lowercased()
         let username2 = numericString(
-            size: integer(from: 2, to: 4)
+            size: integer(
+                fromInclusive: 2,
+                toInclusive: 4
+            )
         )
         let emailDomains = [
             "gmail.com",
@@ -196,7 +214,10 @@ private extension AlchemyGenerator {
         var result = ""
         
         for _ in (1...size) {
-            let randomIndex = integer(from: 0, to: characters.count - 1)
+            let randomIndex = integer(
+                fromInclusive: 0,
+                toInclusive: characters.count - 1
+            )
             let randomCharacter = characters[randomIndex]
             result += "\(randomCharacter)"
         }

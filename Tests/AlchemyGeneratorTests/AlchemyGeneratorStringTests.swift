@@ -45,12 +45,12 @@ class AlchemyStringGeneratorTests: XCTestCase {
 
     override func setUp() {
         size = AlchemyGenerator.integer(
-            from: 10,
-            to: 100
+            fromInclusive: 10,
+            toInclusive: 100
         )
         iterations = AlchemyGenerator.integer(
-            from: 10,
-            to: 100
+            fromInclusive: 10,
+            toInclusive: 100
         )
     }
 
@@ -77,8 +77,8 @@ class AlchemyStringGeneratorTests: XCTestCase {
     func testAlphabeticalStringWithBadSize() {
         for _ in 1...iterations {
             let badSize = AlchemyGenerator.integer(
-                from: -10,
-                to: 0
+                fromInclusive: -10,
+                toInclusive: 0
             )
             let result = AlchemyGenerator.alphabeticString(
                 size: badSize
@@ -103,8 +103,8 @@ class AlchemyStringGeneratorTests: XCTestCase {
     func testAlphanumericStringWithBadSize() {
         for _ in 1...iterations {
             let badSize = AlchemyGenerator.integer(
-                from: -10,
-                to: 0
+                fromInclusive: -10,
+                toInclusive: 0
             )
             let result = AlchemyGenerator.alphanumericString(
                 size: badSize

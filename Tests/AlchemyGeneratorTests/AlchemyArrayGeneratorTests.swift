@@ -16,12 +16,12 @@ class AlchemyListGeneratorTests: XCTestCase {
 
     override func setUp() {
         iterations = AlchemyGenerator.integer(
-            from: 10,
-            to: 100
+            fromInclusive: 10,
+            toInclusive: 100
         )
         size = AlchemyGenerator.integer(
-            from: 25,
-            to: 200
+            fromInclusive: 25,
+            toInclusive: 200
         )
     }
 

@@ -25,7 +25,10 @@ public extension AlchemyGenerator {
         - parameter to: Must be `> from` (inclusive)
      
     */
-    static func integer(from: Int, to: Int) -> Int {
+    static func integer(
+        fromInclusive from: Int,
+        toInclusive to: Int
+    ) -> Int {
         //Ensures `from` is less than `to`
         let `from` = min(from, to)
         let `to` = max(from, to)
@@ -38,19 +41,31 @@ public extension AlchemyGenerator {
     }
     
     static func positiveInteger() -> Int {
-        return integer(from: 1, to: 100_000)
+        return integer(
+            fromInclusive: 1,
+            toInclusive: 100_000
+        )
     }
     
     static func negativeInteger() -> Int {
-        return integer(from: -100_000, to: -1)
+        return integer(
+            fromInclusive: -100_000,
+            toInclusive: -1
+        )
     }
     
     static func anyInteger() -> Int {
-        return integer(from: -1_000, to: 1_000)
+        return integer(
+            fromInclusive: -1_000_000,
+            toInclusive: 1_000_000
+        )
     }
 
     static func age() -> Int {
-        return AlchemyGenerator.integer(from: 19, to: 99)
+        return AlchemyGenerator.integer(
+            fromInclusive: 18,
+            toInclusive: 108
+        )
     }
 
 }

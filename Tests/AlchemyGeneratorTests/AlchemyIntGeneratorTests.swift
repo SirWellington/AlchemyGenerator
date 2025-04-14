@@ -36,8 +36,8 @@ class AlchemyIntGeneratorTests: XCTestCase {
         let to = 1000
 
         let result = AlchemyGenerator.integer(
-            from: to,
-            to: from
+            fromInclusive: to,
+            toInclusive: from
         )
         verify(
             withMin: from,
@@ -73,8 +73,8 @@ class AlchemyIntGeneratorTests: XCTestCase {
         max: Int
     ) {
         let result = AlchemyGenerator.integer(
-            from: min,
-            to: max
+            fromInclusive: min,
+            toInclusive: max
         )
         verify(
             withMin: min,

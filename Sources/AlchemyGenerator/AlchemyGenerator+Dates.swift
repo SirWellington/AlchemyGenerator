@@ -22,7 +22,10 @@ public extension AlchemyGenerator {
 
     static func pastDate() -> Date {
         let now = rightNow()
-        let hoursAgo = integer(from: 1, to: 10_000)
+        let hoursAgo = integer(
+            fromInclusive: 1,
+            toInclusive: 10_000
+        )
 
         return calendar.date(
             byAdding: .hour,
@@ -34,7 +37,10 @@ public extension AlchemyGenerator {
     static func futureDate() -> Date
     {
         let now = rightNow()
-        let hoursAhead = integer(from: 1, to: 10_000)
+        let hoursAhead = integer(
+            fromInclusive: 1,
+            toInclusive: 10_000
+        )
 
         return calendar.date(
             byAdding: .hour,
@@ -44,7 +50,10 @@ public extension AlchemyGenerator {
     }
 
     static func anyDate() -> Date {
-       let branch = AlchemyGenerator.integer(from: 0, to: 3)
+       let branch = AlchemyGenerator.integer(
+        fromInclusive: 0,
+        toInclusive: 3
+       )
 
         switch branch {
             case 0 : return rightNow()
@@ -54,12 +63,11 @@ public extension AlchemyGenerator {
         }
     }
 
-    public class Dates {
-
-        public static var any: Date { return AlchemyGenerator.anyDate() }
-        public static var future: Date { return AlchemyGenerator.futureDate() }
-        public static var now: Date { return AlchemyGenerator.rightNow() }
-        public static var past: Date { return AlchemyGenerator.pastDate() }
+    class Dates {
+        public static var any: Date { AlchemyGenerator.anyDate() }
+        public static var future: Date { AlchemyGenerator.futureDate() }
+        public static var now: Date { AlchemyGenerator.rightNow() }
+        public static var past: Date { AlchemyGenerator.pastDate() }
     }
 
 }

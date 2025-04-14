@@ -15,27 +15,31 @@ public extension AlchemyGenerator {
 
     class Arrays {
         public static var ofString: [String] {
-            return AlchemyGenerator.array() {
-                return AlchemyGenerator.alphanumericString()
+            AlchemyGenerator.array() {
+                 AlchemyGenerator.alphanumericString()
             }
         }
         
         public static var ofAlphabeticString: [String] {
-            return AlchemyGenerator.array() { AlchemyGenerator.alphabeticString() }
+            AlchemyGenerator.array() {
+                AlchemyGenerator.alphabeticString()
+            }
         }
         
         public static var ofAlphanumericString: [String] {
-            return AlchemyGenerator.array() { AlchemyGenerator.alphanumericString() }
+            AlchemyGenerator.array() {
+                AlchemyGenerator.alphanumericString()
+            }
         }
         
         public static var ofIntegers: [Int] {
-            return AlchemyGenerator.array(
+            AlchemyGenerator.array(
                 creator: AlchemyGenerator.anyInteger
             )
         }
         
         public static var ofPositiveIntegers: [Int] {
-            return AlchemyGenerator.array(
+            AlchemyGenerator.array(
                 creator: AlchemyGenerator.positiveInteger
             )
         }
@@ -60,7 +64,10 @@ public extension AlchemyGenerator {
 public extension AlchemyGenerator {
 
     static var defaultSize: Int {
-        return integer(from: 5, to: 50)
+        integer(
+            fromInclusive: 5,
+            toInclusive: 50
+        )
     }
     
     static func array<T>(size: Int = defaultSize, creator: () -> T) -> [T] {
@@ -96,7 +103,10 @@ public extension AlchemyGenerator {
     static func anyOf<T>(_ array: [T]) -> T? {
         guard !array.isEmpty else { return nil }
         
-        let index = integer(from: 0, to: array.count)
+        let index = integer(
+            fromInclusive: 0,
+            toInclusive: array.count
+        )
         
         return array[index]
     }
