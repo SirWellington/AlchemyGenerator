@@ -114,7 +114,7 @@ final class AlchemyGeneratorPlusDoublesTests: AlchemyTest {
     }
 }
 
-finalclass DoubleClassesTests: AlchemyTest {
+final class DoubleClassesTests: AlchemyTest {
 
     func testAny() {
         repeatTest {

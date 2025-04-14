@@ -16,7 +16,7 @@ let package = Package(
     dependencies: [
         .package(
             url: "https://github.com/SirWellington/alchemytest",
-            .branch("develop")
+            branch :"develop"
         )
     ],
     targets: [
