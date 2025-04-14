@@ -10,28 +10,23 @@
 import Foundation
 import XCTest
 
-
 //======================================
 // MARK: ALCHEMY BOOLEAN TESTS
 //======================================
-class AlchemyBooleanGeneratorTests: XCTestCase
-{
+class AlchemyBooleanGeneratorTests: XCTestCase {
+
     var iterations = 100
 
-
-    func testAnyBoolean()
-    {
+    func testAnyBoolean() {
         let set = NSMutableSet()
-        
-        for _ in (1...iterations)
-        {
+
+        for _ in 1...iterations {
             let boolean = AlchemyGenerator.boolean()
             XCTAssertNotNil(boolean)
-            
+
             set.add(boolean)
         }
-        
-        XCTAssert(set.count == 2)
-    }
 
+        XCTAssertEqual(set.count, 2)
+    }
 }
