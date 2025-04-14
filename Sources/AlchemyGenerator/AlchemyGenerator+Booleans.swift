@@ -12,15 +12,14 @@ import Foundation
 //======================================
 // MARK: BOOLEANS
 //======================================
-public extension AlchemyGenerator
-{
-    public class Booleans
-    {
-        public static var any: Bool { return Integers.positive % 2 == 0 }
+public extension AlchemyGenerator {
+    class Booleans {
+        public static var any: Bool {
+            return Integers.positive % 2 == 0
+        }
     }
 
-    public static func boolean() -> Bool
-    {
+    static func boolean() -> Bool {
         return Booleans.any
     }
 }

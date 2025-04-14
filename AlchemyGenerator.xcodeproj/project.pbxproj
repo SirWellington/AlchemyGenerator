@@ -37,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1308C5DC2DAC890100283DAE /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Package.swift; path = ../AlchemyTest/Package.swift; sourceTree = SOURCE_ROOT; };
 		13D1855C2544B210006F3181 /* AlchemyGenerator+Integers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AlchemyGenerator+Integers.swift"; sourceTree = "<group>"; };
 		13D1855D2544B210006F3181 /* AlchemyGenerator+Doubles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AlchemyGenerator+Doubles.swift"; sourceTree = "<group>"; };
 		13D1855E2544B210006F3181 /* AlchemyGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlchemyGenerator.h; sourceTree = "<group>"; };
@@ -129,6 +130,7 @@
 		DEBD16561D8635DA00E5C4DD = {
 			isa = PBXGroup;
 			children = (
+				1308C5DC2DAC890100283DAE /* Package.swift */,
 				13D1855A2544B210006F3181 /* Sources */,
 				13D185752544B21A006F3181 /* Tests */,
 				DEBD16611D8635DA00E5C4DD /* Products */,

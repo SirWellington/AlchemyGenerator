@@ -12,8 +12,7 @@ import Foundation
 //======================================
 // MARK: 
 //======================================
-internal struct Resources
-{
+internal struct Resources {
 
     static let names = """
           Aaren

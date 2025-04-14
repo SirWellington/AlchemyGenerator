@@ -8,8 +8,7 @@
 
 import Foundation
 
-
-public class AlchemyGenerator
-{
+/// Generator for various types of Data. Useful for testing and mocking.
+public class AlchemyGenerator {
     private init() { }
 }

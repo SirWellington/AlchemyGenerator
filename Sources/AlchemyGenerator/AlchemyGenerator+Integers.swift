@@ -8,17 +8,14 @@
 
 import Foundation
 
-
-public extension AlchemyGenerator
-{
-    
-    public class Integers
-    {
-        public static var any: Int { return AlchemyGenerator.anyInteger() }
-        
-        public static var positive: Int { return AlchemyGenerator.positiveInteger() }
-        
-        public static var negative: Int { return AlchemyGenerator.negativeInteger() }
+//======================================
+// MARK: Integers
+//======================================
+public extension AlchemyGenerator {
+    class Integers {
+        public static var any: Int { AlchemyGenerator.anyInteger() }
+        public static var positive: Int { AlchemyGenerator.positiveInteger() }
+        public static var negative: Int { AlchemyGenerator.negativeInteger() }
     }
     
     /**
@@ -28,38 +25,31 @@ public extension AlchemyGenerator
         - parameter to: Must be `> from` (inclusive)
      
     */
-    public static func integer(from: Int, to: Int) -> Int
-    {
+    static func integer(from: Int, to: Int) -> Int {
         //Ensures `from` is less than `to`
-        let `from` = from < to ? from : to
-        let `to` = to > from ? to : from
+        let `from` = min(from, to)
+        let `to` = max(from, to)
         
         let difference = to - from
-        
         let randomNumber = arc4random_uniform(UInt32(difference))
-        
         let result = Int(randomNumber) + from
         
-        return result < to ? result : to
+        return max(result, to)
     }
     
-    public static func positiveInteger() -> Int
-    {
+    static func positiveInteger() -> Int {
         return integer(from: 1, to: 100_000)
     }
     
-    public static func negativeInteger() -> Int
-    {
+    static func negativeInteger() -> Int {
         return integer(from: -100_000, to: -1)
     }
     
-    public static func anyInteger() -> Int
-    {
+    static func anyInteger() -> Int {
         return integer(from: -1_000, to: 1_000)
     }
 
-    public static func age() -> Int
-    {
+    static func age() -> Int {
         return AlchemyGenerator.integer(from: 19, to: 99)
     }
 
