@@ -15,14 +15,14 @@ import Foundation
 public extension AlchemyGenerator {
 
     class Strings {
-        static var alphabetic: String { AlchemyGenerator.alphabeticString() }
-        static var alphanumeric: String { AlchemyGenerator.alphanumericString() }
-        static var email: String { AlchemyGenerator.email() }
-        static var hex: String { AlchemyGenerator.hexString() }
-        static var phone: String { AlchemyGenerator.phoneNumber() }
-        static var name: String { AlchemyGenerator.name() }
-        static var numeric: String { AlchemyGenerator.numericString() }
-        static var url: String { AlchemyGenerator.url() }
+        public static var alphabetic: String { AlchemyGenerator.alphabeticString() }
+        public static var alphanumeric: String { AlchemyGenerator.alphanumericString() }
+        public static var email: String { AlchemyGenerator.email() }
+        public static var hex: String { AlchemyGenerator.hexString() }
+        public static var phone: String { AlchemyGenerator.phoneNumber() }
+        public static var name: String { AlchemyGenerator.name() }
+        public static var numeric: String { AlchemyGenerator.numericString() }
+        public static var url: String { AlchemyGenerator.url() }
     }
     
 }
@@ -61,7 +61,7 @@ public extension AlchemyGenerator {
     }
     
     static func alphanumericString(
-        ofSize size: Int = defaultStringSize
+        size: Int = defaultStringSize
     ) -> String {
         guard size > 0 else { return "" }
         
@@ -79,7 +79,7 @@ public extension AlchemyGenerator {
 //MARK: Hex Strings
 public extension AlchemyGenerator {
     
-    static func hexString(ofSize size: Int = defaultStringSize) -> String {
+    static func hexString(size: Int = defaultStringSize) -> String {
         guard size > 0 else { return "" }
         
         let hexCharacters = Characters.hex

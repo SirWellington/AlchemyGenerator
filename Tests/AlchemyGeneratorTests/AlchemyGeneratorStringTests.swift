@@ -56,7 +56,7 @@ class AlchemyStringGeneratorTests: XCTestCase {
 
     func testNumericString() {
         let string = AlchemyGenerator.numericString(
-            ofSize: size
+            size: size
         )
         XCTAssertEqual(string.count, size)
     }
@@ -64,7 +64,7 @@ class AlchemyStringGeneratorTests: XCTestCase {
     func testAlphabeticalString() {
         for _ in 1...iterations {
             let result = AlchemyGenerator.alphabeticString(
-                ofSize: size
+                size: size
             )
             XCTAssertEqual(result.count, size)
             ensure(
@@ -81,7 +81,7 @@ class AlchemyStringGeneratorTests: XCTestCase {
                 to: 0
             )
             let result = AlchemyGenerator.alphabeticString(
-                ofSize: badSize
+                size: badSize
             )
             XCTAssertTrue(result.isEmpty)
         }
@@ -90,7 +90,7 @@ class AlchemyStringGeneratorTests: XCTestCase {
     func testAlphanumericString() {
         for _ in 1...iterations {
             let result = AlchemyGenerator.alphanumericString(
-                ofSize: size
+                size: size
             )
             XCTAssertEqual(result.count, size)
             ensure(
@@ -107,7 +107,7 @@ class AlchemyStringGeneratorTests: XCTestCase {
                 to: 0
             )
             let result = AlchemyGenerator.alphanumericString(
-                ofSize: badSize
+                size: badSize
             )
             XCTAssertTrue(result.isEmpty)
         }
@@ -116,7 +116,7 @@ class AlchemyStringGeneratorTests: XCTestCase {
     func testHexStrings() {
         for _ in 1...iterations {
             let result = AlchemyGenerator.hexString(
-                ofSize: size
+                size: size
             )
             XCTAssertEqual(result.count, size)
             ensure(
