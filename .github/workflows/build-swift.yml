@@ -1,0 +1,21 @@
+name: Swift Build & Test
+
+on:
+  push:
+    branches: [ develop, main ]
+  pull_request:
+    branches: [ develop, main ]
+
+jobs:
+  build:
+    runs-on: macos-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Set up Swift
+      run: swift --version
+
+    - name: Build and test
+      run: swift test
