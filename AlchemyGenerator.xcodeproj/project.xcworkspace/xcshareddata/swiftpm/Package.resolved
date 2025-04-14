@@ -1,0 +1,15 @@
+{
+  "originHash" : "c3c3626bc3e89a666fba7a45d8a154b86de5a38f280a5158c073b74dc88d40fd",
+  "pins" : [
+    {
+      "identity" : "alchemytest",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/SirWellington/AlchemyTest",
+      "state" : {
+        "branch" : "develop",
+        "revision" : "7eadce288ebda7d2fdd94e52deb4dfeb065ba58a"
+      }
+    }
+  ],
+  "version" : 3
+}

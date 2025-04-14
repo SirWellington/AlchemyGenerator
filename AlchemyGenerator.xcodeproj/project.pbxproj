@@ -3,10 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1308C5E02DAD6E9700283DAE /* AlchemyTest in Frameworks */ = {isa = PBXBuildFile; productRef = 1308C5DF2DAD6E9700283DAE /* AlchemyTest */; };
+		1308C5E32DAD701500283DAE /* AlchemyTest in Frameworks */ = {isa = PBXBuildFile; productRef = 1308C5E22DAD701500283DAE /* AlchemyTest */; };
+		1308C5E62DAD704B00283DAE /* AlchemyTest in Frameworks */ = {isa = PBXBuildFile; productRef = 1308C5E52DAD704B00283DAE /* AlchemyTest */; };
 		13D185672544B210006F3181 /* AlchemyGenerator+Integers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13D1855C2544B210006F3181 /* AlchemyGenerator+Integers.swift */; };
 		13D185682544B210006F3181 /* AlchemyGenerator+Doubles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13D1855D2544B210006F3181 /* AlchemyGenerator+Doubles.swift */; };
 		13D1856A2544B210006F3181 /* Resources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13D185602544B210006F3181 /* Resources.swift */; };
@@ -37,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1308C5DD2DAD6E1100283DAE /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		13D1855C2544B210006F3181 /* AlchemyGenerator+Integers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AlchemyGenerator+Integers.swift"; sourceTree = "<group>"; };
 		13D1855D2544B210006F3181 /* AlchemyGenerator+Doubles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AlchemyGenerator+Doubles.swift"; sourceTree = "<group>"; };
 		13D1855E2544B210006F3181 /* AlchemyGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlchemyGenerator.h; sourceTree = "<group>"; };
@@ -71,6 +75,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1308C5E02DAD6E9700283DAE /* AlchemyTest in Frameworks */,
+				1308C5E32DAD701500283DAE /* AlchemyTest in Frameworks */,
+				1308C5E62DAD704B00283DAE /* AlchemyTest in Frameworks */,
 				DEBD166A1D8635DB00E5C4DD /* AlchemyGenerator.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -129,6 +136,7 @@
 		DEBD16561D8635DA00E5C4DD = {
 			isa = PBXGroup;
 			children = (
+				1308C5DD2DAD6E1100283DAE /* Package.swift */,
 				13D1855A2544B210006F3181 /* Sources */,
 				13D185752544B21A006F3181 /* Tests */,
 				DEBD16611D8635DA00E5C4DD /* Products */,
@@ -187,6 +195,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				1308C5E82DAD71C600283DAE /* PBXTargetDependency */,
 				DEBD166C1D8635DB00E5C4DD /* PBXTargetDependency */,
 			);
 			name = AlchemyGeneratorTests;
@@ -225,6 +234,9 @@
 				en,
 			);
 			mainGroup = DEBD16561D8635DA00E5C4DD;
+			packageReferences = (
+				1308C5E42DAD704B00283DAE /* XCRemoteSwiftPackageReference "AlchemyTest" */,
+			);
 			productRefGroup = DEBD16611D8635DA00E5C4DD /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -285,6 +297,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		1308C5E82DAD71C600283DAE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = 1308C5E72DAD71C600283DAE /* AlchemyTest */;
+		};
 		DEBD166C1D8635DB00E5C4DD /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = DEBD165F1D8635DA00E5C4DD /* AlchemyGenerator */;
@@ -465,7 +481,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = Tests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -483,7 +499,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = Tests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -527,6 +543,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1308C5E42DAD704B00283DAE /* XCRemoteSwiftPackageReference "AlchemyTest" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SirWellington/AlchemyTest";
+			requirement = {
+				branch = develop;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1308C5DF2DAD6E9700283DAE /* AlchemyTest */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = AlchemyTest;
+		};
+		1308C5E22DAD701500283DAE /* AlchemyTest */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = AlchemyTest;
+		};
+		1308C5E52DAD704B00283DAE /* AlchemyTest */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1308C5E42DAD704B00283DAE /* XCRemoteSwiftPackageReference "AlchemyTest" */;
+			productName = AlchemyTest;
+		};
+		1308C5E72DAD71C600283DAE /* AlchemyTest */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1308C5E42DAD704B00283DAE /* XCRemoteSwiftPackageReference "AlchemyTest" */;
+			productName = AlchemyTest;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = DEBD16571D8635DA00E5C4DD /* Project object */;
 }

@@ -3,7 +3,7 @@
 //  AlchemyGenerator
 //
 //  Created by Wellington Moreno on 07/27/2018.
-//  Copyright © 2019 SirWellington. All rights reserved.
+//  Copyright © 2025 SirWellington. All rights reserved.
 //
 
 import Foundation
@@ -12,15 +12,14 @@ import Foundation
 //======================================
 // MARK: BOOLEANS
 //======================================
-public extension AlchemyGenerator
-{
-    public class Booleans
-    {
-        public static var any: Bool { return Integers.positive % 2 == 0 }
+public extension AlchemyGenerator {
+    class Booleans {
+        public static var any: Bool {
+            Integers.positive % 2 == 0
+        }
     }
 
-    public static func boolean() -> Bool
-    {
+    static func boolean() -> Bool {
         return Booleans.any
     }
 }

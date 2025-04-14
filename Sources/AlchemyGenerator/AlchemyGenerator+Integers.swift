@@ -3,64 +3,90 @@
 //  AlchemyGenerator
 //
 //  Created by Wellington Moreno on 9/10/16.
-//  Copyright © 2019 Sir Wellington. All rights reserved.
+//  Copyright © 2025 Sir Wellington. All rights reserved.
 //
 
 import Foundation
 
-
-public extension AlchemyGenerator
-{
-    
-    public class Integers
-    {
-        public static var any: Int { return AlchemyGenerator.anyInteger() }
-        
-        public static var positive: Int { return AlchemyGenerator.positiveInteger() }
-        
-        public static var negative: Int { return AlchemyGenerator.negativeInteger() }
+//======================================
+// MARK: Integers
+//======================================
+public extension AlchemyGenerator {
+    class Integers {
+        public static var any: Int {
+            AlchemyGenerator.anyInteger()
+        }
+        public static var positive: Int {
+            AlchemyGenerator.positiveInteger()
+        }
+        public static var negative: Int {
+            AlchemyGenerator.negativeInteger()
+        }
     }
     
-    /**
-        Returns a random integer from `from`(inclusively) to `to`(inclusively)
-     
-        - parameter from: Must be `< to` (inclusive)
-        - parameter to: Must be `> from` (inclusive)
-     
-    */
-    public static func integer(from: Int, to: Int) -> Int
-    {
+    ///
+    /// Returns a random integer from `from`(inclusively) to `to`(inclusively)
+    ///
+    /// - parameter from: Must be `< to` (inclusive)
+    /// - parameter to: Must be `> from` (inclusive)
+    ///
+    static func integer(
+        fromInclusive from: Int,
+        toInclusive to: Int
+    ) -> Int {
         //Ensures `from` is less than `to`
-        let `from` = from < to ? from : to
-        let `to` = to > from ? to : from
+        let `from` = min(from, to)
+        let `to` = max(from, to)
         
         let difference = to - from
-        
         let randomNumber = arc4random_uniform(UInt32(difference))
-        
         let result = Int(randomNumber) + from
         
-        return result < to ? result : to
+        return min(result, to)
     }
     
-    public static func positiveInteger() -> Int
-    {
-        return integer(from: 1, to: 100_000)
+    ///
+    /// Returns a random integer from `from`(inclusively) to `to`(exclusively)
+    ///
+    /// - parameter from: Must be `< to` (inclusive)
+    /// - parameter to: Must be `> from` (exclusive)
+    ///
+    static func integer(
+        fromInclusive from: Int,
+        toExclusive to: Int
+    ) -> Int {
+        integer(
+            fromInclusive: from,
+            toInclusive: to-1
+        )
     }
     
-    public static func negativeInteger() -> Int
-    {
-        return integer(from: -100_000, to: -1)
+    static func positiveInteger() -> Int {
+        return integer(
+            fromInclusive: 1,
+            toInclusive: 100_000
+        )
     }
     
-    public static func anyInteger() -> Int
-    {
-        return integer(from: -1_000, to: 1_000)
+    static func negativeInteger() -> Int {
+        return integer(
+            fromInclusive: -100_000,
+            toExclusive: 0
+        )
+    }
+    
+    static func anyInteger() -> Int {
+        return integer(
+            fromInclusive: -1_000_000,
+            toInclusive: 1_000_000
+        )
     }
 
-    public static func age() -> Int
-    {
-        return AlchemyGenerator.integer(from: 19, to: 99)
+    static func age() -> Int {
+        return AlchemyGenerator.integer(
+            fromInclusive: 18,
+            toInclusive: 108
+        )
     }
 
 }
