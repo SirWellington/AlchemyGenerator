@@ -26,3 +26,5 @@
 --enable sortImports
 --disable blankLinesBetweenScopes
 --disable blankLinesAtStartOfScope
+--enable numberformatting 
+--decimalGrouping 3

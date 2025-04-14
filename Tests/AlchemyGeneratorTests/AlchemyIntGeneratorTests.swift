@@ -6,9 +6,9 @@
 //  Copyright © 2025 Sir Wellington. All rights reserved.
 //
 
-import Foundation
 @testable import AlchemyGenerator
 import AlchemyTest
+import Foundation
 import XCTest
 
 final class AlchemyIntGeneratorTests: AlchemyTest {
@@ -34,7 +34,7 @@ final class AlchemyIntGeneratorTests: AlchemyTest {
 
     func testRandomNumberWithReversedParameters() {
         let from = 0
-        let to = 1000
+        let to = 1_000
 
         repeatTest {
             let result = AlchemyGenerator.integer(
@@ -134,10 +134,10 @@ extension AlchemyIntGeneratorTests {
         repeatTest {
             let negative = AlchemyGenerator.Integers.negative
             XCTAssertTrue(negative < 0)
-            
+
             let positive = AlchemyGenerator.Integers.positive
             XCTAssertTrue(positive > 0)
-            
+
             let any = AlchemyGenerator.Integers.any
             XCTAssertNotNil(any)
         }

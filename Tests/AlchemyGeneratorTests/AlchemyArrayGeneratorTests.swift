@@ -37,7 +37,7 @@ final class AlchemyListGeneratorTests: AlchemyTest {
             let result = AlchemyGenerator.array(
                 size: size
             ) {
-                return AlchemyGenerator.hexString()
+                AlchemyGenerator.hexString()
             }
 
             ensureNotEmpty(array: result)

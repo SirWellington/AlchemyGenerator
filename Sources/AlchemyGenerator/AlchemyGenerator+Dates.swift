@@ -8,14 +8,13 @@
 
 import Foundation
 
-
 //======================================
 // MARK: Generated Dates
 //======================================
 
 public extension AlchemyGenerator {
     private static var calendar: Calendar { return .autoupdatingCurrent }
-  
+
     static func rightNow() -> Date {
         return Date()
     }
@@ -34,8 +33,7 @@ public extension AlchemyGenerator {
         ) ?? now.addingTimeInterval(Double(-hoursAgo) * 60.0)
     }
 
-    static func futureDate() -> Date
-    {
+    static func futureDate() -> Date {
         let now = rightNow()
         let hoursAhead = integer(
             fromInclusive: 1,
@@ -50,16 +48,16 @@ public extension AlchemyGenerator {
     }
 
     static func anyDate() -> Date {
-       let branch = AlchemyGenerator.integer(
-        fromInclusive: 0,
-        toInclusive: 3
-       )
+        let branch = AlchemyGenerator.integer(
+            fromInclusive: 0,
+            toInclusive: 3
+        )
 
         switch branch {
-            case 0 : return rightNow()
-            case 1 : return pastDate()
-            case 2: return futureDate()
-            default : return rightNow()
+        case 0: return rightNow()
+        case 1: return pastDate()
+        case 2: return futureDate()
+        default: return rightNow()
         }
     }
 
@@ -69,5 +67,4 @@ public extension AlchemyGenerator {
         public static var now: Date { AlchemyGenerator.rightNow() }
         public static var past: Date { AlchemyGenerator.pastDate() }
     }
-
 }

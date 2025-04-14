@@ -15,18 +15,18 @@ import XCTest
 // MARK: ALCHEMY BOOLEAN TESTS
 //======================================
 final class AlchemyBooleanGeneratorTests: AlchemyTest {
-    
+
     func testAnyBoolean() {
         repeatTest {
             let set = NSMutableSet()
-            
-            for _ in 1...iterations {
+
+            for _ in 1 ... iterations {
                 let boolean = AlchemyGenerator.boolean()
                 XCTAssertNotNil(boolean)
-                
+
                 set.add(boolean)
             }
-            
+
             XCTAssertEqual(set.count, 2)
         }
     }

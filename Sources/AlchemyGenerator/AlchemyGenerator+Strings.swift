@@ -8,7 +8,6 @@
 
 import Foundation
 
-
 //======================================
 // MARK: Strings
 //======================================
@@ -24,34 +23,32 @@ public extension AlchemyGenerator {
         public static var numeric: String { AlchemyGenerator.numericString() }
         public static var url: String { AlchemyGenerator.url() }
     }
-    
 }
-
 
 //======================================
 // MARK: STRING GENERATORS
 //======================================
 public extension AlchemyGenerator {
-    
+
     static var defaultStringSize: Int {
-        return Int.random(in: 5...20)
+        return Int.random(in: 5 ... 20)
     }
-    
+
     static func numericString(size: Int = defaultStringSize) -> String {
         guard size > 0 else { return "" }
-        
+
         let numeric = Characters.numeric
         let result = createString(
             characterSet: numeric,
             size: size
         )
-        
+
         return result
     }
-    
+
     static func alphabeticString(size: Int = defaultStringSize) -> String {
         guard size > 0 else { return "" }
-        
+
         let alphabetic = Characters.alphabetic
         let result = createString(
             characterSet: alphabetic,
@@ -59,52 +56,51 @@ public extension AlchemyGenerator {
         )
         return result
     }
-    
+
     static func alphanumericString(
         size: Int = defaultStringSize
     ) -> String {
         guard size > 0 else { return "" }
-        
+
         let alphanumeric = Characters.alphanumeric
         let result = createString(
             characterSet: alphanumeric,
             size: size
         )
-        
+
         return result
     }
-
 }
 
-//MARK: Hex Strings
+// MARK: Hex Strings
 public extension AlchemyGenerator {
-    
+
     static func hexString(size: Int = defaultStringSize) -> String {
         guard size > 0 else { return "" }
-        
+
         let hexCharacters = Characters.hex
         let result = createString(
             characterSet: hexCharacters,
             size: size
         )
-        
+
         return result
     }
 }
 
-//MARK: UUID Creation
+// MARK: UUID Creation
 public extension AlchemyGenerator {
     static func uuidString() -> String {
-        let uuid = UUID.init()
+        let uuid = UUID()
         return uuid.uuidString
     }
 }
 
-//MARK: Characters From Set
+// MARK: Characters From Set
 public extension AlchemyGenerator {
     static func stringFromList(_ list: [String]) -> String {
         guard !list.isEmpty else { return "" }
-        
+
         let randomIndex = integer(
             fromInclusive: 0,
             toInclusive: list.count - 1
@@ -113,12 +109,11 @@ public extension AlchemyGenerator {
     }
 }
 
-
 //======================================
 // MARK: URL
 //======================================
 public extension AlchemyGenerator {
-    
+
     static func domain() -> String {
         let domains = [
             "com",
@@ -143,7 +138,6 @@ public extension AlchemyGenerator {
     }
 }
 
-
 //======================================
 // MARK: PEOPLE
 //======================================
@@ -167,8 +161,8 @@ public extension AlchemyGenerator {
             toInclusive: 999
         )
         let second = integer(
-            fromInclusive: 1000,
-            toInclusive: 9999
+            fromInclusive: 1_000,
+            toInclusive: 9_999
         )
         return "\(country)-\(area)-\(first)-\(second)"
     }
@@ -194,9 +188,7 @@ public extension AlchemyGenerator {
 
         return "\(username1).\(username2)@\(domain)"
     }
-
 }
-
 
 //======================================
 // MARK: PRIVATE METHODS
@@ -204,16 +196,16 @@ public extension AlchemyGenerator {
 
 private extension AlchemyGenerator {
     static func createString(
-        characterSet : Set<Character>,
+        characterSet: Set<Character>,
         size: Int
     ) -> String {
         guard size > 0 else { return "" }
-        
+
         let characters = Array(characterSet)
-        
+
         var result = ""
-        
-        for _ in (1...size) {
+
+        for _ in 1 ... size {
             let randomIndex = integer(
                 fromInclusive: 0,
                 toInclusive: characters.count - 1
@@ -221,29 +213,29 @@ private extension AlchemyGenerator {
             let randomCharacter = characters[randomIndex]
             result += "\(randomCharacter)"
         }
-        
+
         return result
     }
 }
 
-//MARK: Character Sets
+// MARK: Character Sets
 private class Characters {
     static let alphabetic: Set<Character> = {
-       let characters = "abcdefghijklmnopqrstuvwxyz"
+        let characters = "abcdefghijklmnopqrstuvwxyz"
         return Set(characters)
     }()
-    
+
     static let numeric: Set<Character> = {
-        let digits = Set(0...9)
-        let characters = digits.map() { Character("\($0)") }
+        let digits = Set(0 ... 9)
+        let characters = digits.map { Character("\($0)") }
         return Set(characters)
     }()
-    
+
     static var alphanumeric: Set<Character> {
         let combined = alphabetic.union(numeric)
         return Set(combined)
     }
-    
+
     static let hex: Set<Character> = {
         let characters = "0123456789ABCDEF"
         return Set(characters)

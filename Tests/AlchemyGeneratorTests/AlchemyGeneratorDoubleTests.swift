@@ -1,5 +1,5 @@
 //
-//  AlchemyGenerator+DoubleTests.swift
+//  AlchemyGeneratorDoubleTests.swift
 //  AlchemyGeneratorTests
 //
 //  Created by Wellington Moreno on 11/10/17.
@@ -16,7 +16,7 @@ final class AlchemyGeneratorPlusDoublesTests: AlchemyTest {
     func testRandomWithPositive() {
         testRandomWith(
             min: 0,
-            max: 1000
+            max: 1_000
         )
         testRandomWith(
             min: 139,

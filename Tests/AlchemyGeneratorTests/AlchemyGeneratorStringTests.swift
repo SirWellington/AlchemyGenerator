@@ -16,7 +16,8 @@ final class AlchemyStringGeneratorTests: AlchemyTest {
     fileprivate var size: Int = 0
 
     private let alphabeticalCharacters: [Character] = {
-        let lowerCased = "a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z".components(separatedBy: ",")
+        let lowerCased = "a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z"
+            .components(separatedBy: ",")
         let upperCased = lowerCased.map {
             $0.uppercased()
         }
@@ -28,7 +29,7 @@ final class AlchemyStringGeneratorTests: AlchemyTest {
 
     private let numericCharacters: [Character] = {
         var numeric: [Character] = []
-        for i in 0...9 {
+        for i in 0 ... 9 {
             numeric.append(Character("\(i)"))
         }
         return numeric
@@ -178,7 +179,7 @@ final class AlchemyStringGeneratorTests: AlchemyTest {
     func testStringFromList() {
         var strings: [String] = []
 
-        for _ in 1...size {
+        for _ in 1 ... size {
             strings.append(AlchemyGenerator.Strings.alphabetic)
         }
 
@@ -201,7 +202,7 @@ final class AlchemyStringGeneratorTests: AlchemyTest {
     }
 
     private func `repeat`(
-        _ operation: () -> ()
+        _ operation: () -> Void
     ) {
         repeatTest {
             operation()
@@ -250,7 +251,7 @@ private extension AlchemyStringGeneratorTests {
             return results.map {
                 String(text[Range($0.range, in: text)!])
             }
-        } catch let error {
+        } catch {
             print("invalid regex: \(error.localizedDescription)")
             return []
         }
