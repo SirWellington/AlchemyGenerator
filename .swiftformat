@@ -1,0 +1,28 @@
+# SwiftFormat Configuration
+
+# Set maximum line length before wrapping
+--maxwidth 100
+
+# Wrap function arguments before the first argument when wrapping is necessary
+--wraparguments before-first
+--wrapparameters before-first
+
+# Use 4-space indentation
+--indent 4
+--trimwhitespace always
+--enable blankLinesBetweenScopes
+--enable consecutiveBlankLines
+--enable consecutiveSpaces
+--enable blockComments
+
+# Additional formatting preferences
+--stripunusedargs always
+--commas inline
+--lineaftermarks false
+--disable blankLinesAroundMark
+--hexliteralcase uppercase
+--patternlet hoist
+--enable redundantReturn
+--enable sortImports
+--disable blankLinesBetweenScopes
+--disable blankLinesAtStartOfScope
